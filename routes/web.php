@@ -1,4 +1,5 @@
 <?php
+use Illuminate\Contracts\View\View;
 
 /*
 |--------------------------------------------------------------------------
@@ -11,9 +12,12 @@
 |
 */
 
-Route::get('/', function () {
-    return "hello";
+
+
+Route::group(['prefix'=>'admin','middleware'=>'ip'],function () {
+  Route::get('/', function () {
+      return "hello";
+  });
 });
 
-
-Route::get('/home', 'HomeController@index');
+Route::get('/', 'HomeController@index');

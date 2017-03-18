@@ -110,6 +110,10 @@ return [
             'TwigBridge\Extension\Laravel\Str',
             'TwigBridge\Extension\Laravel\Translator',
             'TwigBridge\Extension\Laravel\Url',
+
+            'Barryvdh\Debugbar\Twig\Extension\Debug',
+            'Barryvdh\Debugbar\Twig\Extension\Dump',
+            'Barryvdh\Debugbar\Twig\Extension\Stopwatch',
             // 'TwigBridge\Extension\Laravel\Gate',
 
             // 'TwigBridge\Extension\Laravel\Form',
@@ -209,7 +213,7 @@ return [
         |
         */
         'filters' => [
-            'get' => 'data_get',    
+            'get' => 'data_get',
         ],
-    ],  
+    ],
 ];
