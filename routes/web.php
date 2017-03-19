@@ -16,8 +16,11 @@ use Illuminate\Contracts\View\View;
 
 Route::group(['prefix'=>'admin','middleware'=>'ip'],function () {
   Route::get('/', function () {
-      return "hello";
+      return View::view('welcome');
   });
 });
 
 Route::get('/', 'HomeController@index');
+
+Route::resource('colis', 'ColisController',
+                ['only' => ['index', 'show']]);

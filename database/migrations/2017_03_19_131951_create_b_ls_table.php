@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateAffairesTable extends Migration
+class CreateBLsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,10 @@ class CreateAffairesTable extends Migration
      */
     public function up()
     {
-      Schema::create('affaires', function (Blueprint $table) {
-          $table->increments('id');
-          $table->integer('ref_affaire');
-          $table->unsignedInteger('created_by') -> nullable() -> default(null);
-
-      });
+        Schema::create('b_ls', function (Blueprint $table) {
+            $table->increments('id');
+            $table->timestamps();
+        });
     }
 
     /**
@@ -28,6 +26,6 @@ class CreateAffairesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('affaires');
+        Schema::dropIfExists('b_ls');
     }
 }

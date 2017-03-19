@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePiecesTable extends Migration
+class CreateColisTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreatePiecesTable extends Migration
      */
     public function up()
     {
-      Schema::create('pieces', function (Blueprint $table) {
+      Schema::create('colis', function (Blueprint $table) {
           $table->increments('id');
           $table->unsignedInteger('id_affaire');
           $table->string('ref_piece');
@@ -39,6 +39,6 @@ class CreatePiecesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('pieces');
+        //
     }
 }
