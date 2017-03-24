@@ -1,4 +1,5 @@
 <?php
+use App\Http\Controllers\ColisController;
 use Illuminate\Contracts\View\View;
 
 /*
@@ -12,7 +13,7 @@ use Illuminate\Contracts\View\View;
 |
 */
 
-
+Route::resource('piece','PiecesController');
 
 Route::group(['prefix'=>'admin','middleware'=>'ip'],function () {
   Route::get('/', function () {
@@ -21,6 +22,3 @@ Route::group(['prefix'=>'admin','middleware'=>'ip'],function () {
 });
 
 Route::get('/', 'HomeController@index');
-
-Route::resource('colis', 'ColisController',
-                ['only' => ['index', 'show']]);

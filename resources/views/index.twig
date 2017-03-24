@@ -1,0 +1,14 @@
+{% extends 'layout.app' %}
+
+{{ debug() }}
+
+{% block content %}
+Ceci est la vue des pieces.
+
+
+{% for pieces in pieces %}
+    <li>{{ pieces.id }}</li>
+
+
+{% endfor %}
+{% endblock %}

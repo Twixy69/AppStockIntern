@@ -15,11 +15,12 @@ class CreateColisTable extends Migration
     {
       Schema::create('colis', function (Blueprint $table) {
           $table->increments('id');
-          $table->unsignedInteger('id_affaire');
-          $table->string('ref_piece');
-          $table->unsignedInteger('quantity') -> default(0);
-          $table->float('unit_weight') -> default(0);
-          $table->string('description') -> nullable()-> default(null);
+          $table->enum('color', ['green', 'white','red','blue','yellow']);
+          $table->unsignedInteger('number');
+          $table->date('boxing_date');
+          $table->date('expedition_date');
+          $table->enum('state',['creation','boxed','send','receipt']) -> default('creation');
+          $table->float('weight') -> default(0);
 
           /* Stamps fields */
           $table->timestamps();

@@ -14,7 +14,10 @@ class PiecesController extends Controller
      */
     public function index()
     {
-        //
+      $pieces = Piece::get();
+
+
+      return view('index',compact('pieces'));
     }
 
     /**

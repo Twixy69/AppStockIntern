@@ -9,6 +9,7 @@
         "barryvdh/laravel-debugbar": "^2.3",
         "laravel/framework": "5.4.*",
         "laravel/tinker": "~1.0",
+        "laravelcollective/html": "^5.4",
         "rcrowe/twigbridge": "^0.9.4",
         "wildside/userstamps": "^0.2.2"
     },
