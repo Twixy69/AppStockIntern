@@ -22,7 +22,7 @@ class CreateColisTable extends Migration
           $table->date('reception_date')-> nullable() -> default(null);
           $table->enum('state',['creation','boxed','sending','receipt']) -> default('creation');
           $table->float('weight') -> default(0);
-          $table->unsignedInteger('id_b_ls');
+          $table->unsignedInteger('id_b_ls') -> nullable() -> default(null);
 
           /* Stamps fields */
           $table->timestamps();

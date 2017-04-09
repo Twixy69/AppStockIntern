@@ -4,8 +4,9 @@
 Index des Colis
 
 {% for colis in colis_s %}
-    <h1><a href="{{ route('colis.show',colis)  }}">
-    	{{ colis.name }}
+    <h1><a href="{{ route('colis.show',colis)  }}" style="border-style: solid;
+    border-color: {{ colis.color }}">
+    	{{ colis.number }}
     </a></h1>
     <p>{{ colis.color }}</p>
 

@@ -12,8 +12,11 @@ class Colis extends Model
   protected $table = 'colis';
   protected $guarded = ['id'];
 
+
   public function address()
   {
   	return $this->belongsTo('App\Models\Adresse','id_address');
   }
+
+
 }

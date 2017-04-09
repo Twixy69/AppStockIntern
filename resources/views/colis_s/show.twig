@@ -4,17 +4,27 @@
 {% block content %}
 
 {{ debug() }}
-Vue SHOW d'une pièces.
+Vue SHOW d'un colis.
 
-    <h1>{{ pieces.ref_piece }}</h1>
-    <p>{{ pieces.description }}</p>
+    <h1 style="border-style: solid;
+    border-color: {{ colis.color }}">{{ colis_s.number }}</h1>
+    <p>Date d'emballage : {{ colis_s.boxing_date }}</p>
+    <p>Date d'envoi : {{ colis_s.expedition_date }}</p>
+    <p>Date livraison : {{ colis_s.reception_date }}</p>
+    <p>Etat : {{ colis_s.state }}</p>
+    <p>Poids : {{ colis_s.weight }}</p>
+    <p>Créé le : {{ colis_s.id_b_ls }}</p>
+    <p>Mis à jour le : {{ colis_s.created_at }}</p>
+    <p>Créé par :{{ colis_s.created_by }}</p>
+    <p>Mise à jour par :{{ colis_s.updated_by }}</p>
+    <p>Adresse : {{ colis_s.id_address }}</p>
 
-    <p> <a class="btn btn-primary" href="{{route('piece.edit',pieces)}}"> EDIT</a> </p>
+    <p> <a class="btn btn-primary" href="{{route('colis.edit',colis_s)}}"> EDIT</a> </p>
 
-	{{ form_open({'method': 'DELETE', url:route('piece.destroy',pieces) }) }}
+	{{ form_open({'method': 'DELETE', url:route('colis.destroy',colis_s) }) }}
     {{ form_submit('Delete', {'class':'btn btn-danger'}) }}
 	{{ form_close() }}
 
-    <p> <a class="btn btn-primary" href="{{route('piece.index')}}"> Retour Accueil</a> </p>
+    <p> <a class="btn btn-primary" href="{{route('colis.index')}}"> Retour Accueil</a> </p>
 
 {% endblock %}

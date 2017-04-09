@@ -3,10 +3,17 @@
 namespace App\Http\Controllers;
 
 use App\Models\BL;
+use App\Models\Adresse;
 use Illuminate\Http\Request;
 
 class BLController extends Controller
 {
+
+    public function __construct()
+    {
+        //$this->middleware('auth');
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -14,7 +21,8 @@ class BLController extends Controller
      */
     public function index()
     {
-        //
+      $b_ls = BL::get();
+      return view('b_ls/index',compact('b_ls'));
     }
 
     /**
@@ -24,7 +32,8 @@ class BLController extends Controller
      */
     public function create()
     {
-        //
+        $idAdress = Adresse::pluck('name','id');
+        return view('b_ls/create',compact('idAdress'));
     }
 
     /**
@@ -35,7 +44,9 @@ class BLController extends Controller
      */
     public function store(Request $request)
     {
-        //
+      $colis_s = new Colis($request->all());
+      $colis_s->save();
+      return redirect()->route('colis.index');
     }
 
     /**

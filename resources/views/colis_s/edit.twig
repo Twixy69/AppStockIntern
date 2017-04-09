@@ -13,20 +13,27 @@
 		</ul>
 	{% endif %}
 
-	Ceci est la vue d'édition des pièces.
+	Ceci est la vue d'édition des colis.
 
 
-	{	{{ form_open({'method': 'POST', url:route('colis.update',[colis.id]) }) }}
+	{	{{ form_open({'method': 'PUT', url:route('colis.update',[colis_s.id]) }) }}
 
 			<div class="form-group">
 				{{ form_label('number','Numéro colis') }}
-				{{ form_text('number', (colis.number) ) }}
+				{{ form_text('number', (colis_s.number) ) }}
 
 				{{ form_label('color','Couleur') }}
-				{{ form_select('color', {'a':'b','c':'d'}) }}
+				{{ form_select('color', {'green' : 'vert',
+				 												 'white' : 'BLANC',
+																 'red' : 'ROUGE',
+																 'blue' : 'BLEU',
+																 'yellow' : 'JAUNE' }
+												,(colis_s.color)
+												)
+				}}
 
 				{{ form_label('id_adress','Adresse') }}
-				{{ form_select('id_adress', (idAdress), (colis.id_address)) ) }}
+				{{ form_select('id_adress', (idAdress), (colis_s.id_address)) }}
 
 
 			</div>

@@ -89,7 +89,7 @@ class ColisController extends Controller
             $colis_s = new Colis;
             $colis_s = Colis::find($colis);
 
-            $colis_s->update($request->except('id_piece'));
+            $colis_s->update($request->all());
             $colis_s->save;
 
             return redirect()->route('colis.edit', [$colis_s]);
