@@ -116,8 +116,8 @@ return [
             'Barryvdh\Debugbar\Twig\Extension\Stopwatch',
             // 'TwigBridge\Extension\Laravel\Gate',
 
-            // 'TwigBridge\Extension\Laravel\Form',
-            // 'TwigBridge\Extension\Laravel\Html',
+            'TwigBridge\Extension\Laravel\Form',
+            'TwigBridge\Extension\Laravel\Html',
             // 'TwigBridge\Extension\Laravel\Legacy\Facades',
         ],
 

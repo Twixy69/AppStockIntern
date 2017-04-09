@@ -17,10 +17,12 @@ class CreateColisTable extends Migration
           $table->increments('id');
           $table->enum('color', ['green', 'white','red','blue','yellow']);
           $table->unsignedInteger('number');
-          $table->date('boxing_date');
-          $table->date('expedition_date');
-          $table->enum('state',['creation','boxed','send','receipt']) -> default('creation');
+          $table->date('boxing_date')-> nullable() -> default(null);
+          $table->date('expedition_date')-> nullable() -> default(null);
+          $table->date('reception_date')-> nullable() -> default(null);
+          $table->enum('state',['creation','boxed','sending','receipt']) -> default('creation');
           $table->float('weight') -> default(0);
+          $table->unsignedInteger('id_b_ls');
 
           /* Stamps fields */
           $table->timestamps();
@@ -28,8 +30,7 @@ class CreateColisTable extends Migration
           $table->unsignedInteger('updated_by') -> nullable() -> default(null);
 
           /* Unicity and constraints*/
-          $table->unique(['id_affaire', 'ref_piece']);
-          $table->foreign('id_affaire') -> references('id')->on('affaires');
+          $table->foreign('id_b_ls') -> references('id')->on('b_ls');
       });
     }
 
@@ -40,6 +41,7 @@ class CreateColisTable extends Migration
      */
     public function down()
     {
-        //
+
+        Schema::dropIfExists('colis');
     }
 }

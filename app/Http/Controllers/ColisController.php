@@ -3,10 +3,17 @@
 namespace App\Http\Controllers;
 
 use App\Models\Colis;
+use App\Models\Adresse;
 use Illuminate\Http\Request;
 
 class ColisController extends Controller
 {
+
+    public function __construct()
+    {
+        //$this->middleware('auth');
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -14,7 +21,9 @@ class ColisController extends Controller
      */
     public function index()
     {
-      
+      $colis_s = Colis::get();
+      return view('colis_s/index',compact('colis_s'));
+
     }
 
     /**
@@ -24,7 +33,8 @@ class ColisController extends Controller
      */
     public function create()
     {
-        //
+        $idAdress = Adresse::pluck('name','id');
+        return view('colis_s/create',compact('idAdress'));
     }
 
     /**
@@ -35,7 +45,9 @@ class ColisController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $colis_s = new Colis($request->all());
+        $colis_s->save();
+        return redirect()->route('colis.index');
     }
 
     /**
@@ -44,9 +56,11 @@ class ColisController extends Controller
      * @param  App\Models\Colis  $colis
      * @return \Illuminate\Http\Response
      */
-    public function show(Colis $colis)
+    public function show($colis)
     {
-        //
+        $colis_s = new Colis;
+        $colis_s = Colis::find($colis);
+        return view('colis_s/show',compact('colis_s'));
     }
 
     /**
@@ -55,9 +69,12 @@ class ColisController extends Controller
      * @param  App\Models\Colis  $colis
      * @return \Illuminate\Http\Response
      */
-    public function edit(Colis $colis)
+    public function edit($colis)
     {
-        //
+        $colis_s = new Colis;
+        $colis_s = Colis::find($colis);
+        $idAdress = Adresse::pluck('name','id');
+        return view('colis_s/edit',compact('colis_s','idAdress'));
     }
 
     /**
@@ -67,9 +84,15 @@ class ColisController extends Controller
      * @param  \App\Models\Colis  $colis
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Colis $colis)
+    public function update($colis, Request $request)
     {
-        //
+            $colis_s = new Colis;
+            $colis_s = Colis::find($colis);
+
+            $colis_s->update($request->except('id_piece'));
+            $colis_s->save;
+
+            return redirect()->route('colis.edit', [$colis_s]);
     }
 
     /**
@@ -78,8 +101,10 @@ class ColisController extends Controller
      * @param  \App\Models\Colis  $colis
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Colis $colis)
+    public function destroy($colis)
     {
-        //
+        Colis::destroy($colis);
+
+        return redirect()->route('colis.index');
     }
 }

@@ -1,14 +1,17 @@
 {% extends 'layout.app' %}
 
-{{ debug() }}
 
 {% block content %}
-Ceci est la vue des pieces.
+Index des Pièces
 
+{% for piece in pieces %}
+    <h1><a href="{{ route('piece.show',piece)  }}">
+    	{{ piece.ref_piece }}
+    </a></h1>
 
-{% for pieces in pieces %}
-    <li>{{ pieces.id }}</li>
+    <p>{{ piece.description }}</p>
 
-
+    <p> <a class="btn btn-primary" href="{{route('piece.edit',piece)}}"> EDIT</a> </p>
 {% endfor %}
+
 {% endblock %}

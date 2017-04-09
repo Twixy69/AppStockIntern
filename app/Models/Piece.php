@@ -8,5 +8,7 @@ use Wildside\Userstamps\Userstamps;
 class Piece extends Model
 {
   use Userstamps;
+  protected $table = 'pieces';
   protected $guarded = ['id'];
+
 }

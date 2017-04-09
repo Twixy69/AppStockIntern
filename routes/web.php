@@ -13,12 +13,24 @@ use Illuminate\Contracts\View\View;
 |
 */
 
+Route::resource('affaire','AffairesController');
 Route::resource('piece','PiecesController');
+Route::resource('colis','ColisController',['parameters' => [
+  'colis' => 'colis'
+  ]]);
+Route::resource('b_l','BLController');
+Route::resource('adresse','AdressesController');
 
+
+
+Route::get('/', 'HomeController@index');
+Route::get('/home', 'HomeController@index')->name('home');
+Auth::routes();
+
+
+/*
 Route::group(['prefix'=>'admin','middleware'=>'ip'],function () {
   Route::get('/', function () {
       return View::view('welcome');
   });
-});
-
-Route::get('/', 'HomeController@index');
+});*/

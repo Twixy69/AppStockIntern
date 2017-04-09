@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateBLsTable extends Migration
+class CreateRelationPieceColis extends Migration
 {
     /**
      * Run the migrations.
@@ -13,18 +13,22 @@ class CreateBLsTable extends Migration
      */
     public function up()
     {
-        Schema::create('b_ls', function (Blueprint $table) {
+        Schema::create('relation_colis_piece', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('ref',30);
-            $table->string('matricule',12);
-            $table->string('phone',13);
-            $table->string('name_1',13);
-            $table->string('name_2',13);
 
-            /* Stamps fields */
+            $table->unsignedInteger('id_colis');
+            $table->unsignedInteger('id_piece');
+            $table->unsignedInteger('quantity');
+
+            /* Unicity and constraints*/
+            $table->foreign('id_colis') -> references('id')->on('colis');
+            $table->foreign('id_piece') -> references('id')->on('pieces');
+
+            /* Timestamps */
             $table->timestamps();
             $table->unsignedInteger('created_by') -> nullable() -> default(null);
             $table->unsignedInteger('updated_by') -> nullable() -> default(null);
+
         });
     }
 
@@ -35,6 +39,6 @@ class CreateBLsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('b_ls');
+        Schema::dropIfExists('relation_colis_piece');
     }
 }

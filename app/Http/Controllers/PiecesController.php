@@ -3,10 +3,16 @@
 namespace App\Http\Controllers;
 
 use App\Models\Piece;
+use App\Models\Affaire;
 use Illuminate\Http\Request;
 
 class PiecesController extends Controller
 {
+
+    public function __construct()
+    {
+        //$this->middleware('auth');
+    }
     /**
      * Display a listing of the resource.
      *
@@ -15,9 +21,7 @@ class PiecesController extends Controller
     public function index()
     {
       $pieces = Piece::get();
-
-
-      return view('index',compact('pieces'));
+      return view('pieces.index',compact('pieces'));
     }
 
     /**
@@ -27,7 +31,8 @@ class PiecesController extends Controller
      */
     public function create()
     {
-        //
+        $idAffaire = Affaire::pluck('ref_affaire','id');
+        return view('pieces.create',compact('idAffaire'));
     }
 
     /**
@@ -38,7 +43,9 @@ class PiecesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $pieces = new Piece($request->all());
+        $pieces->save();
+        return redirect()->route('piece.index');
     }
 
     /**
@@ -47,9 +54,11 @@ class PiecesController extends Controller
      * @param  \App\Models\Piece  $pieces
      * @return \Illuminate\Http\Response
      */
-    public function show(Piece $pieces)
+    public function show($piece)
     {
-        //
+        $pieces = new Piece;
+        $pieces = Piece::find($piece);
+        return view('pieces/show',compact('pieces'));
     }
 
     /**
@@ -58,9 +67,12 @@ class PiecesController extends Controller
      * @param  \App\Models\Piece  $pieces
      * @return \Illuminate\Http\Response
      */
-    public function edit(Piece $pieces)
+    public function edit($piece)
     {
-        //
+        $pieces = new Piece;
+        $pieces = Piece::find($piece);
+        $idAffaire = Affaire::pluck('ref_affaire','id');
+        return view('pieces/edit',compact('pieces','idAffaire'));
     }
 
     /**
@@ -70,9 +82,18 @@ class PiecesController extends Controller
      * @param  \App\Models\Piece  $pieces
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Piece $pieces)
+    public function update($piece, Request $request)
     {
-        //
+
+        $pieces = new Piece;
+        $pieces = Piece::find($piece);
+
+        $pieces->update($request->except('id_piece'));
+        $pieces->save;
+
+        return redirect()->route('piece.edit', [$pieces]);
+
+
     }
 
     /**
@@ -81,8 +102,10 @@ class PiecesController extends Controller
      * @param  \App\Models\Piece  $pieces
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Piece $pieces)
+    public function destroy($piece)
     {
-        //
+        Piece::destroy($piece);
+
+        return redirect()->route('piece.index');
     }
 }

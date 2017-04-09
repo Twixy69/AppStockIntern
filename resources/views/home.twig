@@ -1,5 +1,21 @@
 {% extends 'layout.app' %}
 
 {% block content %}
-Ceci est la vue d'accueil.
+
+<center>
+  <h1> Bienvenue sur l'AppliColis !
+    <p><small> Que voulez-vous faire aujourd'hui ?</small></p>
+  </h1>
+</center>
+
+<div class="row">
+  <div class="col-md-4"></div>
+  <div class="col-md-4">
+    <a class="btn btn-info btn-md btn-block" href="{{route('piece.create')}}" role="button">Piece Creer</a>
+    <a class="btn btn-info btn-md btn-block" href="{{route('colis.create')}}" role="button">Colis Creer</a>
+    <a class="btn btn-info btn-md btn-block" href="{{route('b_l.create')}}" role="button">BL Creer</a>
+  </div>
+  <div class="col-md-4"></div>
+</div>
+
 {% endblock %}

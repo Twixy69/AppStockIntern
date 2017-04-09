@@ -1,0 +1,20 @@
+{% extends 'layout.app' %}
+
+
+{% block content %}
+
+{{ debug() }}
+Vue SHOW d'une pièces.
+
+    <h1>{{ pieces.ref_piece }}</h1>
+    <p>{{ pieces.description }}</p>
+
+    <p> <a class="btn btn-primary" href="{{route('piece.edit',pieces)}}"> EDIT</a> </p>
+
+	{{ form_open({'method': 'DELETE', url:route('piece.destroy',pieces) }) }}
+    {{ form_submit('Delete', {'class':'btn btn-danger'}) }}
+	{{ form_close() }}
+
+    <p> <a class="btn btn-primary" href="{{route('piece.index')}}"> Retour Accueil</a> </p>
+
+{% endblock %}

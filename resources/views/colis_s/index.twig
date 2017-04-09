@@ -1,0 +1,15 @@
+{% extends 'layout.app' %}
+
+{% block content %}
+Index des Colis
+
+{% for colis in colis_s %}
+    <h1><a href="{{ route('colis.show',colis)  }}">
+    	{{ colis.name }}
+    </a></h1>
+    <p>{{ colis.color }}</p>
+
+    <p> <a class="btn btn-primary" href="{{route('colis.edit',colis)}}"> EDIT</a> </p>
+{% endfor %}
+
+{% endblock %}
