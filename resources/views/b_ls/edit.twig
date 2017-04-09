@@ -13,25 +13,21 @@
 		</ul>
 	{% endif %}
 
-	Ceci est la vue d'édition des pièces.
+	Ceci est la vue d'édition des BL.
 
 
-	{{ form_open({'method': 'PUT', url:route('piece.update',[pieces.id]) }) }}
+	{{ form_open({'method': 'PUT', url:route('b_l.update',[b_ls.id]) }) }}
 
-	{{ form_label('ref_piece','Reférence Pièce') }}
-	{{ form_text('ref_piece', (pieces.ref_piece) ) }}
+	<div class="form-group">
+		{{ form_label('ref','Reférence BL') }}
+		{{ form_text('ref', (b_ls.ref) ) }}
 
-	{{ form_label('id_affaire','Affaire') }}
-	{{ form_select('id_affaire', (idAffaire),(pieces.id_affaire)) }}
+		{{ form_label('id_address','Adresse') }}
+		{{ form_select('id_address', (idAdress), (b_ls.id_adress)) }}
 
-	{{ form_label('quantity','Quantité') }}
-	{{ form_text('quantity', (pieces.quantity) ) }}
-
-	{{ form_label('unit_weight','Poids Unitaire') }}
-	{{ form_text('unit_weight', (pieces.unit_weight) ) }}
-
-	{{ form_label('description','Description') }}
-	{{ form_text('description', (pieces.description) ) }}
+		{{ form_label('matricule','Immatriculation') }}
+		{{ form_text('matricule', (b_ls.matricule) ) }}
+	</div>
 
 	{{ form_submit('save', {'class':'btn btn-primary'}) }}
 

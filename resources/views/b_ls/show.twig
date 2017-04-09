@@ -4,17 +4,26 @@
 {% block content %}
 
 {{ debug() }}
-Vue SHOW d'une pièces.
+Vue SHOW d'un BL.
 
-    <h1>{{ pieces.ref_piece }}</h1>
-    <p>{{ pieces.description }}</p>
+    <h1>Référence : {{ b_ls.ref }}</h1>
+    <p>Nom 1 : {{ b_ls.name_1 }}</p>
+    <p>Nom 2 : {{ b_ls.name_2 }}</p>
+    <p>Portable conducteur : {{ b_ls.phone }}</p>
+    <p>Immatriculation : {{ b_ls.matricule }}</p>
+    <p>Créé le : {{ b_ls.created_at }}</p>
+    <p>Mis à jour le : {{ b_ls.updated_at }}</p>
+    <p>Créé par :{{ b_ls.created_by }}</p>
+    <p>Mise à jour par :{{ b_ls.updated_by }}</p>
+    <p>Adresse : {{ b_ls.id_address }}</p>
 
-    <p> <a class="btn btn-primary" href="{{route('piece.edit',pieces)}}"> EDIT</a> </p>
 
-	{{ form_open({'method': 'DELETE', url:route('piece.destroy',pieces) }) }}
-    {{ form_submit('Delete', {'class':'btn btn-danger'}) }}
-	{{ form_close() }}
+    <p> <a class="btn btn-primary" href="{{route('b_l.edit',b_ls)}}"> EDIT</a> </p>
 
-    <p> <a class="btn btn-primary" href="{{route('piece.index')}}"> Retour Accueil</a> </p>
+  	{{ form_open({'method': 'DELETE', url:route('b_l.destroy',b_ls) }) }}
+      {{ form_submit('Delete', {'class':'btn btn-danger'}) }}
+  	{{ form_close() }}
+
+    <p> <a class="btn btn-primary" href="{{route('b_l.index')}}"> Retour</a> </p>
 
 {% endblock %}

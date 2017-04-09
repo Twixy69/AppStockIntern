@@ -6,14 +6,14 @@
 {{ debug() }}
 Ceci est la vue des pieces.
 
-{% for pieces in pieces %}
-    <h1><a href="{{ route('piece.show',pieces)  }}">
-    	{{ pieces.ref_piece }}
+{% for b_l in b_ls %}
+    <h1><a href="{{ route('b_l.show',b_l)  }}">
+    	{{ b_l.ref }}
     </a></h1>
-    
-    <p>{{ pieces.description }}</p>
 
-    <p> <a class="btn btn-primary" href="{{route('piece.edit',pieces)}}"> EDIT</a> </p>
+    <p>{{ b_l.description }}</p>
+
+    <p> <a class="btn btn-primary" href="{{route('b_l.edit',b_l)}}"> EDIT</a> </p>
 {% endfor %}
 
 {% endblock %}

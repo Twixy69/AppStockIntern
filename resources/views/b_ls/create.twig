@@ -14,23 +14,17 @@
 
 
 
-	{{ form_open({'method': 'POST', url:route('piece.store') }) }}
+	{{ form_open({'method': 'POST', url:route('b_l.store') }) }}
 
 		<div class="form-group">
-			{{ form_label('ref_piece','Reférence Pièce') }}
-			{{ form_text('ref_piece', (pieces.ref_piece) ) }}
+			{{ form_label('ref','Reférence BL') }}
+			{{ form_text('ref', (b_ls.ref) ) }}
 
-			{{ form_label('id_affaire','Affaire') }}
-			{{ form_select('id_affaire', (idAffaire), null ) }}
+			{{ form_label('idAdress','Adress') }}
+			{{ form_select('idAdress', (idAdress), null ) }}
 
-			{{ form_label('quantity','Quantité') }}
-			{{ form_text('quantity', (pieces.quantity) ) }}
-
-			{{ form_label('unit_weight','Poids Unitaire') }}
-			{{ form_text('unit_weight', (pieces.unit_weight) ) }}
-
-			{{ form_label('description','Description') }}
-			{{ form_text('description', (pieces.description) ) }}
+			{{ form_label('matricule','Immatriculation') }}
+			{{ form_text('matricule', (b_ls.matricule) ) }}
 		</div>
 
 
