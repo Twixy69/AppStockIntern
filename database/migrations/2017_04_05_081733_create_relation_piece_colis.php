@@ -23,12 +23,6 @@ class CreateRelationPieceColis extends Migration
             /* Unicity and constraints*/
             $table->foreign('id_colis') -> references('id')->on('colis');
             $table->foreign('id_piece') -> references('id')->on('pieces');
-
-            /* Timestamps */
-            $table->timestamps();
-            $table->unsignedInteger('created_by') -> nullable() -> default(null);
-            $table->unsignedInteger('updated_by') -> nullable() -> default(null);
-
         });
     }
 

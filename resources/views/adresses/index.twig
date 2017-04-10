@@ -4,16 +4,16 @@
 {% block content %}
 
 {{ debug() }}
-Ceci est la vue des pieces.
+Ceci est la vue des adresses.
 
-{% for pieces in pieces %}
-    <h1><a href="{{ route('piece.show',pieces)  }}">
-    	{{ pieces.ref_piece }}
+{% for adresse in adresses %}
+    <h1><a href="{{ route('adresse.show',adresse)  }}">
+    	{{ adresse.name }}
     </a></h1>
-    
-    <p>{{ pieces.description }}</p>
 
-    <p> <a class="btn btn-primary" href="{{route('piece.edit',pieces)}}"> EDIT</a> </p>
+    <p>{{ adresse.type }}</p>
+
+    <p> <a class="btn btn-primary" href="{{route('adresse.edit',adresse)}}"> EDIT</a> </p>
 {% endfor %}
 
 {% endblock %}

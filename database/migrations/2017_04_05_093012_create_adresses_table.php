@@ -17,7 +17,7 @@ class CreateAdressesTable extends Migration
             $table->increments('id');
 
             $table->string('name',150) -> default('Pseudonyme Adresse');
-            $table->enum('type',['Peinture','Chantier','Galva','Livraison']);
+            $table->enum('type',['Peinture','Chantier','Galva','Livraison']) -> default('Chantier');
 
             /* Adress part*/
             $table->string('number') -> nullable() -> default(null);

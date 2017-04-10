@@ -14,23 +14,30 @@
 
 
 
-	{{ form_open({'method': 'POST', url:route('piece.store') }) }}
+	{{ form_open({'method': 'POST', url:route('adresse.store') }) }}
 
 		<div class="form-group">
-			{{ form_label('ref_piece','Reférence Pièce') }}
-			{{ form_text('ref_piece', (pieces.ref_piece) ) }}
+			{{ form_label('name','Nom Adresse') }}
+			{{ form_text('name', (adresses.name) ) }}
 
-			{{ form_label('id_affaire','Affaire') }}
-			{{ form_select('id_affaire', (idAffaire), null ) }}
+			{{ form_label('type','Type d\'adresse') }}
+			{{ form_select('type', ['Peinture','Chantier','Galva','Livraison'])
+			}}
 
-			{{ form_label('quantity','Quantité') }}
-			{{ form_text('quantity', (pieces.quantity) ) }}
+			{{ form_label('street','Nom de la voie') }}
+			{{ form_text('street', (adresses.street) ) }}
 
-			{{ form_label('unit_weight','Poids Unitaire') }}
-			{{ form_text('unit_weight', (pieces.unit_weight) ) }}
+			{{ form_label('number','Numéro') }}
+			{{ form_text('number', (adresses.number) ) }}
 
-			{{ form_label('description','Description') }}
-			{{ form_text('description', (pieces.description) ) }}
+			{{ form_label('postal_code','Code Postal') }}
+			{{ form_text('postal_code', (adresses.postal_code) ) }}
+
+			{{ form_label('city','Ville') }}
+			{{ form_text('city', (adresses.city) ) }}
+
+			{{ form_label('state','Pays') }}
+			{{ form_text('state', (adresses.state) ) }}
 		</div>
 
 
