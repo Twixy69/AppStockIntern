@@ -3,10 +3,17 @@
 namespace App\Http\Controllers;
 
 use App\Models\Affaire;
+use App\Models\Adresse;
 use Illuminate\Http\Request;
 
-class AffairesController extends Controller
+class AffaireController extends Controller
 {
+
+    public function __construct()
+    {
+        //$this->middleware('auth');
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -14,7 +21,8 @@ class AffairesController extends Controller
      */
     public function index()
     {
-        //
+        $affaires = Affaire::get();
+        return view('affaires/index',compact('affaires'));
     }
 
     /**
@@ -24,7 +32,8 @@ class AffairesController extends Controller
      */
     public function create()
     {
-        //
+        $idAdress = Adresse::pluck('name','id');
+        return view('affaires/create',compact('idAdress'));
     }
 
     /**
@@ -35,7 +44,9 @@ class AffairesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $affaires = new Affaire($request->all());
+        $affaires->save();
+        return redirect()->route('affaire.index');
     }
 
     /**
@@ -44,9 +55,11 @@ class AffairesController extends Controller
      * @param  \App\Models\Affaire  $affaire
      * @return \Illuminate\Http\Response
      */
-    public function show(Affaire $affaire)
+    public function show($affaire)
     {
-        //
+        $affaires = new Affaire;
+        $affaires = Affaire::find($affaire);
+        return view('affaires/show',compact('affaires'));
     }
 
     /**
@@ -55,9 +68,12 @@ class AffairesController extends Controller
      * @param  \App\Models\Affaire  $affaire
      * @return \Illuminate\Http\Response
      */
-    public function edit(Affaire $affaire)
+    public function edit($affaire)
     {
-        //
+        $affaires = new Affaire;
+        $affaires = Affaire::find($affaire);
+        $idAdress = Adresse::pluck('name','id');
+        return view('affaires/edit',compact('affaires','idAdress'));
     }
 
     /**
@@ -67,9 +83,15 @@ class AffairesController extends Controller
      * @param  \App\Models\Affaire  $affaire
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Affaire $affaire)
+    public function update($affaire, Request $request)
     {
-        //
+          $affaires = new Affaire;
+          $affaires = Affaire::find($affaire);
+
+          $affaires->update($request->all());
+          $affaires->save;
+
+          return redirect()->route('$affaire.edit', [$affaires]);
     }
 
     /**
@@ -78,8 +100,10 @@ class AffairesController extends Controller
      * @param  \App\Models\Affaire  $affaire
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Affaire $affaire)
+    public function destroy($affaire)
     {
-        //
+        Affaire::destroy($affaire);
+
+        return redirect()->route('affaire.index');
     }
 }

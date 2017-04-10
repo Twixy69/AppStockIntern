@@ -6,7 +6,7 @@ use App\Models\Piece;
 use App\Models\Affaire;
 use Illuminate\Http\Request;
 
-class PiecesController extends Controller
+class PieceController extends Controller
 {
 
     public function __construct()

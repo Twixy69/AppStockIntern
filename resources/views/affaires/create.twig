@@ -14,23 +14,11 @@
 
 
 
-	{{ form_open({'method': 'POST', url:route('piece.store') }) }}
+	{{ form_open({'method': 'POST', url:route('affaire.store') }) }}
 
 		<div class="form-group">
-			{{ form_label('ref_piece','Reférence Pièce') }}
-			{{ form_text('ref_piece', (pieces.ref_piece) ) }}
-
-			{{ form_label('id_affaire','Affaire') }}
-			{{ form_select('id_affaire', (idAffaire), null ) }}
-
-			{{ form_label('quantity','Quantité') }}
-			{{ form_text('quantity', (pieces.quantity) ) }}
-
-			{{ form_label('unit_weight','Poids Unitaire') }}
-			{{ form_text('unit_weight', (pieces.unit_weight) ) }}
-
-			{{ form_label('description','Description') }}
-			{{ form_text('description', (pieces.description) ) }}
+			{{ form_label('ref_affaire','Reférence Affaire') }}
+			{{ form_text('ref_affaire', (affaires.ref_affaire) ) }}
 		</div>
 
 

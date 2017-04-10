@@ -13,13 +13,13 @@ use Illuminate\Contracts\View\View;
 |
 */
 
-Route::resource('affaire','AffairesController');
-Route::resource('piece','PiecesController');
+Route::resource('affaire','AffaireController');
+Route::resource('piece','PieceController');
 Route::resource('colis','ColisController',['parameters' => [
   'colis' => 'colis'
   ]]);
 Route::resource('b_l','BLController');
-Route::resource('adresse','AdressesController');
+Route::resource('adresse','AdresseController');
 
 
 

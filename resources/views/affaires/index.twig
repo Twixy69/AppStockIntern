@@ -4,16 +4,15 @@
 {% block content %}
 
 {{ debug() }}
-Ceci est la vue des pieces.
+Ceci est la vue des affaires.
 
-{% for pieces in pieces %}
-    <h1><a href="{{ route('piece.show',pieces)  }}">
-    	{{ pieces.ref_piece }}
+{% for affaire in affaires %}
+    <h1><a href="{{ route('affaire.show',affaire)  }}">
+    	{{ affaire.ref_affaire }}
     </a></h1>
-    
-    <p>{{ pieces.description }}</p>
 
-    <p> <a class="btn btn-primary" href="{{route('piece.edit',pieces)}}"> EDIT</a> </p>
+
+    <p> <a class="btn btn-primary" href="{{route('affaire.edit',affaire)}}"> EDIT</a> </p>
 {% endfor %}
 
 {% endblock %}

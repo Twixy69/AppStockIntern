@@ -2,10 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Adresse;
 use Illuminate\Http\Request;
 
-class AdressesController extends Controller
+class AdresseController extends Controller
 {
+    public function __construct()
+    {
+        //$this->middleware('auth');
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -13,7 +19,8 @@ class AdressesController extends Controller
      */
     public function index()
     {
-        //
+        $adresses = Adresse::get();
+        return view('adresses/index',compact('adresses'));
     }
 
     /**
@@ -23,7 +30,7 @@ class AdressesController extends Controller
      */
     public function create()
     {
-        //
+        return view('adresses/create');
     }
 
     /**
@@ -34,7 +41,9 @@ class AdressesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $adresses = new Adresse($request->all());
+        $adresses->save();
+        return redirect()->route('adresse.index');
     }
 
     /**
@@ -43,9 +52,11 @@ class AdressesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($adresse)
     {
-        //
+        $adresses = new Adresse;
+        $adresses = Adresse::find($adresse);
+        return view('adresses/show',compact('adresses'));
     }
 
     /**
@@ -54,9 +65,11 @@ class AdressesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($adresse)
     {
-        //
+        $adresses = new Adresse;
+        $adresses = Adresse::find($adresse);
+        return view('adresses/edit');
     }
 
     /**
@@ -66,9 +79,15 @@ class AdressesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, $adresse)
     {
-        //
+        $adresses = new Adresse;
+        $adresses = Adresse::find($adresse);
+
+        $adresses->update($request->all());
+        $adresses->save;
+
+        return redirect()->route('adresse.edit', [$adresses]);
     }
 
     /**
@@ -77,8 +96,10 @@ class AdressesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($adresse)
     {
-        //
+        Adresse::destroy($adresse);
+
+        return redirect()->route('adresse.index');
     }
 }

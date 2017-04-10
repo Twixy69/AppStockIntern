@@ -86,13 +86,13 @@ class ColisController extends Controller
      */
     public function update($colis, Request $request)
     {
-            $colis_s = new Colis;
-            $colis_s = Colis::find($colis);
+        $colis_s = new Colis;
+        $colis_s = Colis::find($colis);
 
-            $colis_s->update($request->all());
-            $colis_s->save;
+        $colis_s->update($request->all());
+        $colis_s->save;
 
-            return redirect()->route('colis.edit', [$colis_s]);
+        return redirect()->route('colis.edit', [$colis_s]);
     }
 
     /**

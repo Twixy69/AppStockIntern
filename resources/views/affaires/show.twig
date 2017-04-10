@@ -4,17 +4,16 @@
 {% block content %}
 
 {{ debug() }}
-Vue SHOW d'une pièces.
+Vue SHOW d'une affaire.
 
-    <h1>{{ pieces.ref_piece }}</h1>
-    <p>{{ pieces.description }}</p>
+    <h1>{{ affaires.ref_affaire }}</h1>
 
-    <p> <a class="btn btn-primary" href="{{route('piece.edit',pieces)}}"> EDIT</a> </p>
+    <p> <a class="btn btn-primary" href="{{route('affaire.edit',affaires)}}">EDIT</a> </p>
 
-	{{ form_open({'method': 'DELETE', url:route('piece.destroy',pieces) }) }}
+	{{ form_open({'method': 'DELETE', url:route('affaire.destroy',affaires) }) }}
     {{ form_submit('Delete', {'class':'btn btn-danger'}) }}
 	{{ form_close() }}
 
-    <p> <a class="btn btn-primary" href="{{route('piece.index')}}"> Retour Accueil</a> </p>
+    <p> <a class="btn btn-primary" href="{{route('affaire.index')}}">Retour</a> </p>
 
 {% endblock %}
