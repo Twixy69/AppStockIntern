@@ -22,7 +22,7 @@ class CreateColisTable extends Migration
           $table->date('reception_date')-> nullable() -> default(null);
           $table->enum('state',['creation','boxed','sending','receipt']) -> default('creation');
           $table->float('weight') -> default(0);
-          $table->unsignedInteger('id_b_ls') -> nullable() -> default(null);
+          $table->unsignedInteger('id_b_l') -> nullable() -> default(null);
 
           /* Stamps fields */
           $table->timestamps();
@@ -30,7 +30,7 @@ class CreateColisTable extends Migration
           $table->unsignedInteger('updated_by') -> nullable() -> default(null);
 
           /* Unicity and constraints*/
-          $table->foreign('id_b_ls') -> references('id')->on('b_ls');
+          $table->foreign('id_b_l') -> references('id')->on('b_ls');
       });
     }
 

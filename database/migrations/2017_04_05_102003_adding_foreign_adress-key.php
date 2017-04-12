@@ -39,6 +39,22 @@ class AddingForeignAdressKey extends Migration
      */
     public function down()
     {
-        //
+      Schema::table('colis', function (Blueprint $table) {
+              $table->dropForeign('colis_id_address_foreign');
+              $table->dropColumn('id_address');
+
+      });
+
+      Schema::table('affaires', function (Blueprint $table) {
+              $table->dropForeign('affaires_id_address_foreign');
+              $table->dropColumn('id_address');
+
+      });
+
+      Schema::table('b_ls', function (Blueprint $table) {
+              $table->dropForeign('b_ls_id_address_foreign');
+              $table->dropColumn('id_address');
+
+      });
     }
 }

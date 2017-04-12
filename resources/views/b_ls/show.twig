@@ -24,6 +24,28 @@ Vue SHOW d'un BL.
       {{ form_submit('Delete', {'class':'btn btn-danger'}) }}
   	{{ form_close() }}
 
+
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>Colis</th>
+          <th>Couleur</th>
+          <th>Adresse</th>
+        </tr>
+      </thead>
+      <tbody>
+      {% for colis in colis_s %}
+        <tr>
+          <td><a href="{{ route('colis.show',colis) }}">
+            {{ colis.number }}
+          </a></td>
+          <td>{{ colis.color }}</td>
+          <td>{{ colis.id_adress }}</td>
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+
     <p> <a class="btn btn-primary" href="{{route('b_l.index')}}"> Retour</a> </p>
 
 {% endblock %}

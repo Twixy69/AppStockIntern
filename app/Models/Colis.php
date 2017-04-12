@@ -19,4 +19,14 @@ class Colis extends Model
   }
 
 
+  public function pieces()
+  {
+  	return $this->belongsToMany('App\Models\Piece','colis_piece','id_colis','id_piece')->withPivot('quantity');
+  }
+
+  public function b_l()
+  {
+    return $this->belongsTo('App\Models\BL','id_b_l');
+  }
+
 }

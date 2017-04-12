@@ -13,7 +13,7 @@ class CreateRelationPieceColis extends Migration
      */
     public function up()
     {
-        Schema::create('relation_colis_piece', function (Blueprint $table) {
+        Schema::create('colis_piece', function (Blueprint $table) {
             $table->increments('id');
 
             $table->unsignedInteger('id_colis');
@@ -33,6 +33,8 @@ class CreateRelationPieceColis extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('relation_colis_piece');
+
+
+        Schema::dropIfExists('colis_piece');
     }
 }

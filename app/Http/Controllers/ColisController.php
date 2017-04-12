@@ -60,7 +60,11 @@ class ColisController extends Controller
     {
         $colis_s = new Colis;
         $colis_s = Colis::find($colis);
-        return view('colis_s/show',compact('colis_s'));
+
+        $pieces = $colis_s->pieces()->get();
+
+
+        return view('colis_s/show',compact('colis_s','pieces'));
     }
 
     /**
@@ -92,7 +96,7 @@ class ColisController extends Controller
         $colis_s->update($request->all());
         $colis_s->save;
 
-        return redirect()->route('colis.edit', [$colis_s]);
+        return redirect()->route('colis.show', [$colis_s]);
     }
 
     /**

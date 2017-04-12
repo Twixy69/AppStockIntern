@@ -19,12 +19,36 @@ Vue SHOW d'un colis.
     <p>Mise à jour par :{{ colis_s.updated_by }}</p>
     <p>Adresse : {{ colis_s.id_address }}</p>
 
+
     <p> <a class="btn btn-primary" href="{{route('colis.edit',colis_s)}}"> EDIT</a> </p>
 
-	{{ form_open({'method': 'DELETE', url:route('colis.destroy',colis_s) }) }}
-    {{ form_submit('Delete', {'class':'btn btn-danger'}) }}
-	{{ form_close() }}
+  	{{ form_open({'method': 'DELETE', url:route('colis.destroy',colis_s) }) }}
+      {{ form_submit('Delete', {'class':'btn btn-danger'}) }}
+  	{{ form_close() }}
+
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>Référence Piece</th>
+          <th>Quantité</th>
+          <th>Poids Unitaire</th>
+        </tr>
+      </thead>
+      <tbody>
+      {% for piece in pieces %}
+        <tr>
+          <td><a href="{{ route('piece.show',piece) }}">
+            {{ piece.ref_piece }}
+          </a></td>
+          <td>{{ piece.pivot.quantity }}</td>
+          <td>{{ piece.unit_weight }}</td>
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+
 
     <p> <a class="btn btn-primary" href="{{route('colis.index')}}"> Retour</a> </p>
+
 
 {% endblock %}

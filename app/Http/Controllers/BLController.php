@@ -59,7 +59,11 @@ class BLController extends Controller
     {
         $b_ls = new BL;
         $b_ls = BL::find($b_l);
-        return view('b_ls/show',compact('b_ls'));
+
+        $colis_s = $b_ls->colis()->get();
+
+
+        return view('b_ls/show',compact('b_ls','colis_s'));
     }
 
     /**

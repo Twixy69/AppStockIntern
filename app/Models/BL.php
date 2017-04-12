@@ -16,4 +16,9 @@ class BL extends Model
   {
     return $this->belongsTo('App\Models\Adresse','id_address');
   }
+
+  public function colis()
+  {
+    return $this->hasMany('App\Models\Colis','id_b_l');
+  }
 }

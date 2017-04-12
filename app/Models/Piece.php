@@ -11,4 +11,11 @@ class Piece extends Model
   protected $table = 'pieces';
   protected $guarded = ['id'];
 
+
+
+  public function colis()
+  {
+    return $this->belongsToMany('App\Models\Colis','colis_piece','id_piece','id_colis');
+  }
+
 }
