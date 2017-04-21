@@ -166,9 +166,10 @@ return [
         /*
          * Package Service Providers...
          */
-        Laravel\Tinker\TinkerServiceProvider::class,
-        TwigBridge\ServiceProvider::class,
-        Barryvdh\Debugbar\ServiceProvider::class,
+        Laravel\Tinker\TinkerServiceProvider::class, // dev - function in command line
+        TwigBridge\ServiceProvider::class,  // twig
+        Barryvdh\Debugbar\ServiceProvider::class, // dev - debugbar
+        Maatwebsite\Excel\ExcelServiceProvider::class, // import csv - export php
 
         /*
         * Package deleted from laravel's core
@@ -214,6 +215,7 @@ return [
         'DB' => Illuminate\Support\Facades\DB::class,
         'Eloquent' => Illuminate\Database\Eloquent\Model::class,
         'Event' => Illuminate\Support\Facades\Event::class,
+        'Excel' => Maatwebsite\Excel\Facades\Excel::class,
         'File' => Illuminate\Support\Facades\File::class,
         'Form' => Collective\Html\FormFacade::class,
         'Gate' => Illuminate\Support\Facades\Gate::class,
