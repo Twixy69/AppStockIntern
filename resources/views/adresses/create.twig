@@ -17,28 +17,32 @@
 	{{ form_open({'method': 'POST', url:route('adresse.store') }) }}
 
 		<div class="form-group">
-			{{ form_label('name','Reférence Pièce') }}
+			{{ form_label('name','Nom Adresse') }}
 			{{ form_text('name', (adresses.name) ) }}
 
-			{{ form_label('type','Quantité') }}
-			{{ form_text('type', (adresses.type) ) }}
+			{{ form_label('type','Type d\'adresse') }}
+			{{ form_select('type',
+											['Peinture','Chantier','Galva','Livraison'],
+											(adresses.type)
+										)
+			}}
 
-			{{ form_label('number','Poids Unitaire') }}
-			{{ form_text('number', (adresses.number) ) }}
-
-			{{ form_label('street','Description') }}
+			{{ form_label('street','Nom de la voie') }}
 			{{ form_text('street', (adresses.street) ) }}
 
-			{{ form_label('option','Description') }}
+			{{ form_label('option','Complément') }}
 			{{ form_text('option', (adresses.option) ) }}
 
-			{{ form_label('postal_code','Description') }}
+			{{ form_label('number','Numéro') }}
+			{{ form_text('number', (adresses.number) ) }}
+
+			{{ form_label('postal_code','Code Postal') }}
 			{{ form_text('postal_code', (adresses.postal_code) ) }}
 
-			{{ form_label('city','Description') }}
+			{{ form_label('city','Ville') }}
 			{{ form_text('city', (adresses.city) ) }}
 
-			{{ form_label('state','Description') }}
+			{{ form_label('state','Pays') }}
 			{{ form_text('state', (adresses.state) ) }}
 		</div>
 

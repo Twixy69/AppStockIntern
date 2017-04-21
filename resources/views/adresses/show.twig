@@ -7,13 +7,13 @@
 Vue SHOW d'une adresse.
 
     <h1>{{ adresses.name }}</h1>
-    <p>{{ adresses.type }}</p>
-    <p>{{ adresses.street }}</p>
-    <p>{{ adresses.option }}</p>
-    <p>{{ adresses.number }}</p>
-    <p>{{ adresses.postal_code }}</p>
-    <p>{{ adresses.city }}</p>
-    <p>{{ adresses.state }}</p>
+    <p>Type adresse : {{ adresses.type }}</p>
+    <p>Voie : {{ adresses.street }}</p>
+    <p>Supplément : {{ adresses.option }}</p>
+    <p>Numéro voie : {{ adresses.number }}</p>
+    <p>Code Postal : {{ adresses.postal_code }}</p>
+    <p>Ville : {{ adresses.city }}</p>
+    <p>Pays : {{ adresses.state }}</p>
 
     <p> <a class="btn btn-primary" href="{{route('adresse.edit',adresses)}}"> EDIT</a> </p>
 

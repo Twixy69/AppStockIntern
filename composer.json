@@ -11,7 +11,8 @@
         "laravel/tinker": "~1.0",
         "laravelcollective/html": "^5.4",
         "rcrowe/twigbridge": "^0.9.4",
-        "wildside/userstamps": "^0.2.2"
+        "wildside/userstamps": "^0.2.2",
+        "maatwebsite/excel": "~2.1.0"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

@@ -23,10 +23,19 @@
 		{{ form_text('ref', (b_ls.ref) ) }}
 
 		{{ form_label('id_address','Adresse') }}
-		{{ form_select('id_address', (idAdress), (b_ls.id_address)) }}
+		{{ form_select('id_address', (idAdress), null ) }}
 
-		{{ form_label('matricule','Immatriculation') }}
+		{{ form_label('matricule','Immatriculation remorque') }}
 		{{ form_text('matricule', (b_ls.matricule) ) }}
+
+		{{ form_label('phone','Téléphone conducteur/responsable') }}
+		{{ form_text('phone', (b_ls.phone) ) }}
+
+		{{ form_label('name_1','Responsable 1') }}
+		{{ form_text('name_1', (b_ls.name_1) ) }}
+
+		{{ form_label('name_2','Responsable 2') }}
+		{{ form_text('name_2', (b_ls.name_2) ) }}
 	</div>
 
 	{{ form_submit('save', {'class':'btn btn-primary'}) }}
