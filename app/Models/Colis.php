@@ -18,7 +18,6 @@ class Colis extends Model
   	return $this->belongsTo('App\Models\Adresse','id_address');
   }
 
-
   public function pieces()
   {
   	return $this->belongsToMany('App\Models\Piece','colis_piece','id_colis','id_piece')->withPivot('quantity');

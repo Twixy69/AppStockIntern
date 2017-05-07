@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+
+use App\Models\Lot;
 use App\Models\Affaire;
 use App\Models\Adresse;
 use Illuminate\Http\Request;
@@ -44,8 +46,19 @@ class AffaireController extends Controller
      */
     public function store(Request $request)
     {
-        $affaires = new Affaire($request->all());
+        $affaires = new Affaire($request->except('nb_lots'));
         $affaires->save();
+
+        $alphabet = range('A','J');
+
+        for ($i=0; $i < (int)request()->nb_lots; $i++)
+        {
+          $lot = new Lot;
+          $lot->id_affaire = (int)request()->ref_affaire;
+          $lot->ref_lot = $alphabet[$i];
+          $lot->save();
+         }
+
         return redirect()->route('affaire.index');
     }
 

@@ -1,0 +1,19 @@
+{% extends 'layout.app' %}
+
+
+{% block content %}
+
+{{ debug() }}
+Ceci est la vue des adresses.
+
+{% for adresse in adresses %}
+    <h1><a href="{{ route('adresse.show',adresse)  }}">
+    	{{ adresse.name }}
+    </a></h1>
+
+    <p>{{ adresse.type }}</p>
+
+    <p> <a class="btn btn-primary" href="{{route('adresse.edit',adresse)}}"> EDIT</a> </p>
+{% endfor %}
+
+{% endblock %}

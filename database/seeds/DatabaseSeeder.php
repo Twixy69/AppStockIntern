@@ -19,6 +19,9 @@ class DatabaseSeeder extends Seeder {
       $this->call('AffaireTableSeeder');
       $this->command->info('Affaire table seeded!');
 
+      $this->call('LotTableSeeder');
+      $this->command->info('Lot table seeded!');
+
       $this->call('BLTableSeeder');
       $this->command->info('BL table seeded!');
 
@@ -95,6 +98,22 @@ class AffaireTableSeeder extends Seeder {
     }
 }
 
+class LotTableSeeder extends Seeder {
+
+    public function run()
+    {
+      DB::table('lots')->truncate();
+      DB::table('lots')->insert([
+        'id_affaire' => '1',
+        'ref_lot'=> 'A',
+        ]);
+      DB::table('lots')->insert([
+        'id_affaire' => '1',
+        'ref_lot'=> 'B',
+        ]);
+    }
+}
+
 class BLTableSeeder extends Seeder {
 
     public function run()
@@ -149,7 +168,7 @@ class PieceTableSeeder extends Seeder {
     {
       DB::table('pieces')->truncate();
       DB::table('pieces')->insert([
-        'id_affaire' => '1',
+        'id_lot' => '1',
         'ref_piece' => '1023',
         'quantity' => '10',
         'unit_weight' => '2',
@@ -157,7 +176,7 @@ class PieceTableSeeder extends Seeder {
         'created_by' => '1'
       ]);
       DB::table('pieces')->insert([
-        'id_affaire' => '1',
+        'id_lot' => '1',
         'ref_piece' => '1024',
         'quantity' => '2',
         'unit_weight' => '50',
@@ -165,7 +184,7 @@ class PieceTableSeeder extends Seeder {
         'created_by' => '1'
       ]);
       DB::table('pieces')->insert([
-        'id_affaire' => '1',
+        'id_lot' => '1',
         'ref_piece' => '1025',
         'quantity' => '5',
         'unit_weight' => '125',
@@ -173,7 +192,7 @@ class PieceTableSeeder extends Seeder {
         'created_by' => '1'
       ]);
       DB::table('pieces')->insert([
-        'id_affaire' => '2',
+        'id_lot' => '2',
         'ref_piece' => '2012',
         'quantity' => '23',
         'unit_weight' => '7',

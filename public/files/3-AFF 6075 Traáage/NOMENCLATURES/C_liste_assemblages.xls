@@ -1,0 +1,1495 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:x="urn:schemas-microsoft-com:office:excel">
+<head>
+<!--[if !mso]><style> v\:* {behavior:url(#default#VML);}
+     x\:* {behavior:url(#default#VML);}</style><![endif]-->
+<style>
+<!--table
+@page {margin:.47in .47in .80in .47in;mso-header-margin:.47in;mso-footer-margin:.40in;mso-footer-data:"Page &P de &N";mso-page-orientation:portrait}
+tr {height:17pt;}
+col {mso-width-source:userset}
+td {white-space:nowrap;text-align:left;padding-left:6px;vertical-align:bottom;
+    mso-number-format:"0\.0";font-family:Arial;font-size:10.0pt;
+    border-left:.5pt solid black;border-bottom:.5pt solid black}
+.xl01 {text-align:center}
+.xl02 {text-align:right;padding-right:6px}
+.xl03 {text-align:right;padding-right:6px;mso-number-format:0}
+.xl04 {font-size:8.0pt;border:none}
+.xl11 {text-align:center;vertical-align:middle;font-size:16.0pt;font-weight:700;color:navy;border-left:1.0pt solid black;border-top:1.0pt solid black;border-bottom:1.0pt solid black}
+.xl12 {text-align:left;vertical-align:middle;border-left:1.0pt solid black;border-top:1.0pt solid black}
+.xl13 {text-align:center;vertical-align:middle;font-size:18pt}
+.xl14 {text-align:right;font-size:12.0pt;border-left:1.0pt solid black;border-bottom:1.0pt solid black}
+.xl15 {padding-left:12px;font-size:12.0pt;border-left:none;border-bottom:1.0pt solid black}
+.xl16 {padding-left:12px;font-size:12.0pt;border-left:1.0pt solid black;border-bottom:1.0pt solid black}
+.xl17 {mso-number-format:"\@";font-size:12.0pt;font-weight:700;border-left:none;border-bottom:1.0pt solid black}
+.xl18 {padding-left:12px;font-size:12.0pt;font-weight:700;border-bottom:1.0pt solid black;border-right:1.0pt solid black}
+.xl19 {padding-left:1px;text-align:center;border-bottom:none}
+.xl20 {padding-left:1px;text-align:center;border-bottom:1.0pt solid black}
+.xl21 {text-align:right;border-left:1.0pt solid black;border-top:1.0pt solid black;border-bottom:1.0pt solid black}
+.xl22 {text-align:right;padding-right:6px;mso-number-format:0;font-weight:700;border-left:none;border-top:1.0pt solid black;border-bottom:1.0pt solid black}
+.xl23 {border-left:none;border-top:1.0pt solid black;border-bottom:1.0pt solid black}
+.xl24 {text-align:right;padding-right:6px;font-weight:700;border-top:1.0pt solid black;border-bottom:1.0pt solid black}
+-->
+</style>
+<!--[if gte mso 9]>
+ <xml>
+  <x:ExcelWorkbook>
+   <x:ExcelWorksheets>
+    <x:ExcelWorksheet>
+     <x:Name>liste d'assemblage</x:Name>
+     <x:WorksheetOptions>
+      <x:Print>
+       <x:ValidPrinterInfo/>
+        <x:PaperSizeIndex>9</x:PaperSizeIndex>
+        <x:Scale>95</x:Scale>
+        <x:HorizontalResolution>600</x:HorizontalResolution>
+        <x:VerticalResolution>600</x:VerticalResolution>
+       </x:ValidPrinterInfo/>
+      </x:Print>
+     </x:WorksheetOptions>
+    </x:ExcelWorksheet>
+   </x:ExcelWorksheets>
+  </x:ExcelWorkbook>
+ </xml>
+<![endif]-->
+</head>
+<body>
+<table x:str style='border-collapse:collapse;table-layout:fixed;width:513pt'>
+<col style='width:56pt'><col style='width:109pt'><col style='width:30pt'>
+<col style='width:56pt'><col style='width:41pt'><col style='width:41pt'>
+<col style='width:46pt'><col style='width:51pt'><col style='width:83pt'>
+<tr style='height:34pt'>
+ <td colspan=7 class=xl11>Liste d'assemblage</td>
+ <td colspan=2 rowspan=2 class=xl13 style='border:1.0pt solid black'>
+  <!--[if gte vml 1]>
+      <v:shapetype id="_x0000_t75" coordsize="21600,21600" o:spt="75";stroked=f></v:shapetype>
+      <v:shape type="#_x0000_t75" style='position:relative;margin-left:12pt;margin-top:4pt;width:104pt;height:41pt'>
+      <v:imagedata src='C:\ProgramData\Tekla Structures\21.0\\Environments\france\symbols\Logo_societe.png'>
+      </v:shape><![endif]-->
+ </td>
+</tr>
+<tr>
+ <td class=xl14>Date :</td>
+ <td class=xl15>05.04.2017</td>
+ <td colspan=2 class=xl16>Projet N°:</td>
+ <td colspan=3 class=xl17>6075        </td>
+</tr>
+<tr>
+ <td class=xl14>Titre :</td>
+ <td colspan=8 class=xl18>GHD Bât N                &nbsp;&nbsp;
+ &nbsp;&nbsp;&nbsp;                              </td>
+</tr>
+<tr style='height:14pt'>
+ <td class=xl19 style='border-left:1.0pt solid black'>Repère</td><td class=xl19>Profil</td>
+ <td class=xl19>Qté</td><td class=xl19>Qualité</td><td class=xl19>Long.</td>
+ <td class=xl19>Surface</td><td class=xl19>Poids</td><td class=xl19>Pds Tot</td>
+ <td class=xl19 style='border-right:1.0pt solid black'>Désignation</td>
+</tr>
+<tr style='height:14pt'>
+ <td class=xl20 style='border-left:1.0pt solid black'>&nbsp;</td><td class=xl20>&nbsp;</td>
+ <td class=xl20>&nbsp;</td><td class=xl20>&nbsp;</td><td class=xl20>mm</td>
+ <td class=xl20>m²</td><td class=xl20>kg</td><td class=xl20>kg</td>
+ <td class=xl20 style='border-right:1.0pt solid black'>&nbsp;</td>
+</tr>
+<tr style='height:6pt'>
+  <td colspan=9 class=xl04 style='border-bottom:1.0pt solid black'></td>
+</tr>
+<tr>
+ <td style='background:silver;border-left:1.0pt solid black'>3-1     </td>
+ <td class=xl01 style='background:silver'>CONSOLE             </td>
+ <td class=xl03 style='background:silver' x:num>1    </td>
+ <td style='background:silver'></td>
+ <td class=xl03 style='background:silver' x:num>    400</td>
+ <td class=xl02 style='background:silver' x:num>    0.9</td>
+ <td class=xl02 style='background:silver' x:num>    49.5</td>
+ <td class=xl02 style='background:silver' x:num>     49.5</td>
+ <td style='background:silver;border-right:1.0pt solid black'> </td>
+</tr>
+<tr>
+ <td class=xl02 style='border-left:1.0pt solid black'>29       </td>
+ <td>PL20*400            </td>
+ <td class=xl03 x:num>1    </td>
+ <td>S235JR  </td>
+ <td class=xl03 x:num>    560</td>
+ <td class=xl02 x:num>    0.5</td>
+ <td class=xl02 x:num>    35.2</td>
+ <td class=xl02 x:num>     35.2</td>
+ <td style='border-right:1.0pt solid black'>CONSOLE      </td>
+</tr>
+<tr>
+ <td class=xl02 style='border-left:1.0pt solid black'>31       </td>
+ <td>PL20*111            </td>
+ <td class=xl03 x:num>1    </td>
+ <td>S235JR  </td>
+ <td class=xl03 x:num>    230</td>
+ <td class=xl02 x:num>    0.0</td>
+ <td class=xl02 x:num>     2.5</td>
+ <td class=xl02 x:num>      2.5</td>
+ <td style='border-right:1.0pt solid black'>VOILE        </td>
+</tr>
+<tr>
+ <td class=xl02 style='border-left:1.0pt solid black'>32       </td>
+ <td>PL10*225            </td>
+ <td class=xl03 x:num>1    </td>
+ <td>S235JR  </td>
+ <td class=xl03 x:num>    350</td>
+ <td class=xl02 x:num>    0.2</td>
+ <td class=xl02 x:num>     5.8</td>
+ <td class=xl02 x:num>      5.8</td>
+ <td style='border-right:1.0pt solid black'>PLATINE      </td>
+</tr>
+<tr>
+ <td class=xl02 style='border-left:1.0pt solid black'>37       </td>
+ <td>PL10*177            </td>
+ <td class=xl03 x:num>1    </td>
+ <td>S235JR  </td>
+ <td class=xl03 x:num>    286</td>
+ <td class=xl02 x:num>    0.1</td>
+ <td class=xl02 x:num>     2.7</td>
+ <td class=xl02 x:num>      2.7</td>
+ <td style='border-right:1.0pt solid black'>VOILE        </td>
+</tr>
+<tr>
+ <td class=xl02 style='border-left:1.0pt solid black'>38       </td>
+ <td>PL10*205            </td>
+ <td class=xl03 x:num>1    </td>
+ <td>S235JR  </td>
+ <td class=xl03 x:num>    295</td>
+ <td class=xl02 x:num>    0.1</td>
+ <td class=xl02 x:num>     3.3</td>
+ <td class=xl02 x:num>      3.3</td>
+ <td style='border-right:1.0pt solid black'>VOILE        </td>
+</tr>
+<tr>
+ <td style='background:silver;border-left:1.0pt solid black'>3-2     </td>
+ <td class=xl01 style='background:silver'>CONSOLE             </td>
+ <td class=xl03 style='background:silver' x:num>1    </td>
+ <td style='background:silver'></td>
+ <td class=xl03 style='background:silver' x:num>    500</td>
+ <td class=xl02 style='background:silver' x:num>    1.0</td>
+ <td class=xl02 style='background:silver' x:num>    60.9</td>
+ <td class=xl02 style='background:silver' x:num>     60.9</td>
+ <td style='background:silver;border-right:1.0pt solid black'> </td>
+</tr>
+<tr>
+ <td class=xl02 style='border-left:1.0pt solid black'>12       </td>
+ <td>PL20*500            </td>
+ <td class=xl03 x:num>1    </td>
+ <td>S235JR  </td>
+ <td class=xl03 x:num>    560</td>
+ <td class=xl02 x:num>    0.6</td>
+ <td class=xl02 x:num>    44.0</td>
+ <td class=xl02 x:num>     44.0</td>
+ <td style='border-right:1.0pt solid black'>CONSOLE      </td>
+</tr>
+<tr>
+ <td class=xl02 style='border-left:1.0pt solid black'>2        </td>
+ <td>PL10*194            </td>
+ <td class=xl03 x:num>2    </td>
+ <td>S235JR  </td>
+ <td class=xl03 x:num>    396</td>
+ <td class=xl02 x:num>    0.1</td>
+ <td class=xl02 x:num>     4.2</td>
+ <td class=xl02 x:num>      8.5</td>
+ <td style='border-right:1.0pt solid black'>VOILE        </td>
+</tr>
+<tr>
+ <td class=xl02 style='border-left:1.0pt solid black'>30       </td>
+ <td>PL20*111            </td>
+ <td class=xl03 x:num>1    </td>
+ <td>S235JR  </td>
+ <td class=xl03 x:num>    233</td>
+ <td class=xl02 x:num>    0.0</td>
+ <td class=xl02 x:num>     2.6</td>
+ <td class=xl02 x:num>      2.6</td>
+ <td style='border-right:1.0pt solid black'>VOILE        </td>
+</tr>
+<tr>
+ <td class=xl02 style='border-left:1.0pt solid black'>39       </td>
+ <td>PL10*213            </td>
+ <td class=xl03 x:num>1    </td>
+ <td>S235JR  </td>
+ <td class=xl03 x:num>    350</td>
+ <td class=xl02 x:num>    0.2</td>
+ <td class=xl02 x:num>     5.8</td>
+ <td class=xl02 x:num>      5.8</td>
+ <td style='border-right:1.0pt solid black'>APPUIS       </td>
+</tr>
+<tr>
+ <td style='background:silver;border-left:1.0pt solid black'>3-3     </td>
+ <td class=xl01 style='background:silver'>POUTRE              </td>
+ <td class=xl03 style='background:silver' x:num>1    </td>
+ <td style='background:silver'></td>
+ <td class=xl03 style='background:silver' x:num>  10645</td>
+ <td class=xl02 style='background:silver' x:num>   24.3</td>
+ <td class=xl02 style='background:silver' x:num>  1743.2</td>
+ <td class=xl02 style='background:silver' x:num>   1743.2</td>
+ <td style='background:silver;border-right:1.0pt solid black'> </td>
+</tr>
+<tr>
+ <td class=xl02 style='border-left:1.0pt solid black'>127      </td>
+ <td>HEA500              </td>
+ <td class=xl03 x:num>1    </td>
+ <td>S275JR  </td>
+ <td class=xl03 x:num>  10645</td>
+ <td class=xl02 x:num>   22.5</td>
+ <td class=xl02 x:num>  1650.4</td>
+ <td class=xl02 x:num>   1650.4</td>
+ <td style='border-right:1.0pt solid black'>POUTRE       </td>
+</tr>
+<tr>
+ <td class=xl02 style='border-left:1.0pt solid black'>1        </td>
+ <td>PL10*130            </td>
+ <td class=xl03 x:num>4    </td>
+ <td>S235JR  </td>
+ <td class=xl03 x:num>    441</td>
+ <td class=xl02 x:num>    0.1</td>
+ <td class=xl02 x:num>     4.4</td>
+ <td class=xl02 x:num>     17.7</td>
+ <td style='border-right:1.0pt solid black'>RAIDISSEUR   </td>
+</tr>
+<tr>
+ <td class=xl02 style='border-left:1.0pt solid black'>11       </td>
+ <td>PL20*260            </td>
+ <td class=xl03 x:num>1    </td>
+ <td>S235JR  </td>
+ <td class=xl03 x:num>    600</td>
+ <td class=xl02 x:num>    0.3</td>
+ <td class=xl02 x:num>    24.5</td>
+ <td class=xl02 x:num>     24.5</td>
+ <td style='border-right:1.0pt solid black'>PLATINE      </td>
+</tr>
+<tr>
+ <td class=xl02 style='border-left:1.0pt solid black'>13       </td>
+ <td>HEA200              </td>
+ <td class=xl03 x:num>1    </td>
+ <td>S275JR  </td>
+ <td class=xl03 x:num>    209</td>
+ <td class=xl02 x:num>    0.2</td>
+ <td class=xl02 x:num>     8.8</td>
+ <td class=xl02 x:num>      8.8</td>
+ <td style='border-right:1.0pt solid black'>MOIGNON      </td>
+</tr>
+<tr>
+ <td class=xl02 style='border-left:1.0pt solid black'>14       </td>
+ <td>PL25*300            </td>
+ <td class=xl03 x:num>1    </td>
+ <td>S235JR  </td>
+ <td class=xl03 x:num>    422</td>
+ <td class=xl02 x:num>    0.3</td>
+ <td class=xl02 x:num>    24.3</td>
+ <td class=xl02 x:num>     24.3</td>
+ <td style='border-right:1.0pt solid black'>AILE         </td>
+</tr>
+<tr>
+ <td class=xl02 style='border-left:1.0pt solid black'>79       </td>
+ <td>PL10*130            </td>
+ <td class=xl03 x:num>2    </td>
+ <td>S235JR  </td>
+ <td class=xl03 x:num>    441</td>
+ <td class=xl02 x:num>    0.1</td>
+ <td class=xl02 x:num>     4.5</td>
+ <td class=xl02 x:num>      8.9</td>
+ <td style='border-right:1.0pt solid black'>RAIDISSEUR   </td>
+</tr>
+<tr>
+ <td class=xl02 style='border-left:1.0pt solid black'>113      </td>
+ <td>PL12*130            </td>
+ <td class=xl03 x:num>2    </td>
+ <td>S235JR  </td>
+ <td class=xl03 x:num>    355</td>
+ <td class=xl02 x:num>    0.1</td>
+ <td class=xl02 x:num>     4.3</td>
+ <td class=xl02 x:num>      8.5</td>
+ <td style='border-right:1.0pt solid black'>RAIDISSEUR   </td>
+</tr>
+<tr>
+ <td style='background:silver;border-left:1.0pt solid black'>3-4     </td>
+ <td class=xl01 style='background:silver'>POUTRE              </td>
+ <td class=xl03 style='background:silver' x:num>1    </td>
+ <td style='background:silver'></td>
+ <td class=xl03 style='background:silver' x:num>  12674</td>
+ <td class=xl02 style='background:silver' x:num>   28.6</td>
+ <td class=xl02 style='background:silver' x:num>  2057.8</td>
+ <td class=xl02 style='background:silver' x:num>   2057.8</td>
+ <td style='background:silver;border-right:1.0pt solid black'> </td>
+</tr>
+<tr>
+ <td class=xl02 style='border-left:1.0pt solid black'>128      </td>
+ <td>HEA500              </td>
+ <td class=xl03 x:num>1    </td>
+ <td>S275JR  </td>
+ <td class=xl03 x:num>  12674</td>
+ <td class=xl02 x:num>   26.7</td>
+ <td class=xl02 x:num>  1965.0</td>
+ <td class=xl02 x:num>   1965.0</td>
+ <td style='border-right:1.0pt solid black'>POUTRE       </td>
+</tr>
+<tr>
+ <td class=xl02 style='border-left:1.0pt solid black'>1        </td>
+ <td>PL10*130            </td>
+ <td class=xl03 x:num>4    </td>
+ <td>S235JR  </td>
+ <td class=xl03 x:num>    441</td>
+ <td class=xl02 x:num>    0.1</td>
+ <td class=xl02 x:num>     4.4</td>
+ <td class=xl02 x:num>     17.7</td>
+ <td style='border-right:1.0pt solid black'>RAIDISSEUR   </td>
+</tr>
+<tr>
+ <td class=xl02 style='border-left:1.0pt solid black'>11       </td>
+ <td>PL20*260            </td>
+ <td class=xl03 x:num>1    </td>
+ <td>S235JR  </td>
+ <td class=xl03 x:num>    600</td>
+ <td class=xl02 x:num>    0.3</td>
+ <td class=xl02 x:num>    24.5</td>
+ <td class=xl02 x:num>     24.5</td>
+ <td style='border-right:1.0pt solid black'>PLATINE      </td>
+</tr>
+<tr>
+ <td class=xl02 style='border-left:1.0pt solid black'>13       </td>
+ <td>HEA200              </td>
+ <td class=xl03 x:num>1    </td>
+ <td>S275JR  </td>
+ <td class=xl03 x:num>    209</td>
+ <td class=xl02 x:num>    0.2</td>
+ <td class=xl02 x:num>     8.8</td>
+ <td class=xl02 x:num>      8.8</td>
+ <td style='border-right:1.0pt solid black'>MOIGNON      </td>
+</tr>
+<tr>
+ <td class=xl02 style='border-left:1.0pt solid black'>14       </td>
+ <td>PL25*300            </td>
+ <td class=xl03 x:num>1    </td>
+ <td>S235JR  </td>
+ <td class=xl03 x:num>    422</td>
+ <td class=xl02 x:num>    0.3</td>
+ <td class=xl02 x:num>    24.3</td>
+ <td class=xl02 x:num>     24.3</td>
+ <td style='border-right:1.0pt solid black'>AILE         </td>
+</tr>
+<tr>
+ <td class=xl02 style='border-left:1.0pt solid black'>79       </td>
+ <td>PL10*130            </td>
+ <td class=xl03 x:num>2    </td>
+ <td>S235JR  </td>
+ <td class=xl03 x:num>    441</td>
+ <td class=xl02 x:num>    0.1</td>
+ <td class=xl02 x:num>     4.5</td>
+ <td class=xl02 x:num>      8.9</td>
+ <td style='border-right:1.0pt solid black'>RAIDISSEUR   </td>
+</tr>
+<tr>
+ <td class=xl02 style='border-left:1.0pt solid black'>113      </td>
+ <td>PL12*130            </td>
+ <td class=xl03 x:num>2    </td>
+ <td>S235JR  </td>
+ <td class=xl03 x:num>    355</td>
+ <td class=xl02 x:num>    0.1</td>
+ <td class=xl02 x:num>     4.3</td>
+ <td class=xl02 x:num>      8.5</td>
+ <td style='border-right:1.0pt solid black'>RAIDISSEUR   </td>
+</tr>
+<tr>
+ <td style='background:silver;border-left:1.0pt solid black'>3-5     </td>
+ <td class=xl01 style='background:silver'>POUTRE              </td>
+ <td class=xl03 style='background:silver' x:num>1    </td>
+ <td style='background:silver'></td>
+ <td class=xl03 style='background:silver' x:num>  12420</td>
+ <td class=xl02 style='background:silver' x:num>   28.0</td>
+ <td class=xl02 style='background:silver' x:num>  2018.3</td>
+ <td class=xl02 style='background:silver' x:num>   2018.3</td>
+ <td style='background:silver;border-right:1.0pt solid black'> </td>
+</tr>
+<tr>
+ <td class=xl02 style='border-left:1.0pt solid black'>129      </td>
+ <td>HEA500              </td>
+ <td class=xl03 x:num>1    </td>
+ <td>S275JR  </td>
+ <td class=xl03 x:num>  12420</td>
+ <td class=xl02 x:num>   26.2</td>
+ <td class=xl02 x:num>  1925.5</td>
+ <td class=xl02 x:num>   1925.5</td>
+ <td style='border-right:1.0pt solid black'>POUTRE       </td>
+</tr>
+<tr>
+ <td class=xl02 style='border-left:1.0pt solid black'>1        </td>
+ <td>PL10*130            </td>
+ <td class=xl03 x:num>4    </td>
+ <td>S235JR  </td>
+ <td class=xl03 x:num>    441</td>
+ <td class=xl02 x:num>    0.1</td>
+ <td class=xl02 x:num>     4.4</td>
+ <td class=xl02 x:num>     17.7</td>
+ <td style='border-right:1.0pt solid black'>RAIDISSEUR   </td>
+</tr>
+<tr>
+ <td class=xl02 style='border-left:1.0pt solid black'>11       </td>
+ <td>PL20*260            </td>
+ <td class=xl03 x:num>1    </td>
+ <td>S235JR  </td>
+ <td class=xl03 x:num>    600</td>
+ <td class=xl02 x:num>    0.3</td>
+ <td class=xl02 x:num>    24.5</td>
+ <td class=xl02 x:num>     24.5</td>
+ <td style='border-right:1.0pt solid black'>PLATINE      </td>
+</tr>
+<tr>
+ <td class=xl02 style='border-left:1.0pt solid black'>13       </td>
+ <td>HEA200              </td>
+ <td class=xl03 x:num>1    </td>
+ <td>S275JR  </td>
+ <td class=xl03 x:num>    209</td>
+ <td class=xl02 x:num>    0.2</td>
+ <td class=xl02 x:num>     8.8</td>
+ <td class=xl02 x:num>      8.8</td>
+ <td style='border-right:1.0pt solid black'>MOIGNON      </td>
+</tr>
+<tr>
+ <td class=xl02 style='border-left:1.0pt solid black'>14       </td>
+ <td>PL25*300            </td>
+ <td class=xl03 x:num>1    </td>
+ <td>S235JR  </td>
+ <td class=xl03 x:num>    422</td>
+ <td class=xl02 x:num>    0.3</td>
+ <td class=xl02 x:num>    24.3</td>
+ <td class=xl02 x:num>     24.3</td>
+ <td style='border-right:1.0pt solid black'>AILE         </td>
+</tr>
+<tr>
+ <td class=xl02 style='border-left:1.0pt solid black'>79       </td>
+ <td>PL10*130            </td>
+ <td class=xl03 x:num>2    </td>
+ <td>S235JR  </td>
+ <td class=xl03 x:num>    441</td>
+ <td class=xl02 x:num>    0.1</td>
+ <td class=xl02 x:num>     4.5</td>
+ <td class=xl02 x:num>      8.9</td>
+ <td style='border-right:1.0pt solid black'>RAIDISSEUR   </td>
+</tr>
+<tr>
+ <td class=xl02 style='border-left:1.0pt solid black'>113      </td>
+ <td>PL12*130            </td>
+ <td class=xl03 x:num>2    </td>
+ <td>S235JR  </td>
+ <td class=xl03 x:num>    355</td>
+ <td class=xl02 x:num>    0.1</td>
+ <td class=xl02 x:num>     4.3</td>
+ <td class=xl02 x:num>      8.5</td>
+ <td style='border-right:1.0pt solid black'>RAIDISSEUR   </td>
+</tr>
+<tr>
+ <td style='background:silver;border-left:1.0pt solid black'>3-6     </td>
+ <td class=xl01 style='background:silver'>POUTRE              </td>
+ <td class=xl03 style='background:silver' x:num>1    </td>
+ <td style='background:silver'></td>
+ <td class=xl03 style='background:silver' x:num>  12072</td>
+ <td class=xl02 style='background:silver' x:num>   27.3</td>
+ <td class=xl02 style='background:silver' x:num>  1964.4</td>
+ <td class=xl02 style='background:silver' x:num>   1964.4</td>
+ <td style='background:silver;border-right:1.0pt solid black'> </td>
+</tr>
+<tr>
+ <td class=xl02 style='border-left:1.0pt solid black'>130      </td>
+ <td>HEA500              </td>
+ <td class=xl03 x:num>1    </td>
+ <td>S275JR  </td>
+ <td class=xl03 x:num>  12072</td>
+ <td class=xl02 x:num>   25.5</td>
+ <td class=xl02 x:num>  1871.6</td>
+ <td class=xl02 x:num>   1871.6</td>
+ <td style='border-right:1.0pt solid black'>POUTRE       </td>
+</tr>
+<tr>
+ <td class=xl02 style='border-left:1.0pt solid black'>1        </td>
+ <td>PL10*130            </td>
+ <td class=xl03 x:num>4    </td>
+ <td>S235JR  </td>
+ <td class=xl03 x:num>    441</td>
+ <td class=xl02 x:num>    0.1</td>
+ <td class=xl02 x:num>     4.4</td>
+ <td class=xl02 x:num>     17.7</td>
+ <td style='border-right:1.0pt solid black'>RAIDISSEUR   </td>
+</tr>
+<tr>
+ <td class=xl02 style='border-left:1.0pt solid black'>11       </td>
+ <td>PL20*260            </td>
+ <td class=xl03 x:num>1    </td>
+ <td>S235JR  </td>
+ <td class=xl03 x:num>    600</td>
+ <td class=xl02 x:num>    0.3</td>
+ <td class=xl02 x:num>    24.5</td>
+ <td class=xl02 x:num>     24.5</td>
+ <td style='border-right:1.0pt solid black'>PLATINE      </td>
+</tr>
+<tr>
+ <td class=xl02 style='border-left:1.0pt solid black'>13       </td>
+ <td>HEA200              </td>
+ <td class=xl03 x:num>1    </td>
+ <td>S275JR  </td>
+ <td class=xl03 x:num>    209</td>
+ <td class=xl02 x:num>    0.2</td>
+ <td class=xl02 x:num>     8.8</td>
+ <td class=xl02 x:num>      8.8</td>
+ <td style='border-right:1.0pt solid black'>MOIGNON      </td>
+</tr>
+<tr>
+ <td class=xl02 style='border-left:1.0pt solid black'>14       </td>
+ <td>PL25*300            </td>
+ <td class=xl03 x:num>1    </td>
+ <td>S235JR  </td>
+ <td class=xl03 x:num>    422</td>
+ <td class=xl02 x:num>    0.3</td>
+ <td class=xl02 x:num>    24.3</td>
+ <td class=xl02 x:num>     24.3</td>
+ <td style='border-right:1.0pt solid black'>AILE         </td>
+</tr>
+<tr>
+ <td class=xl02 style='border-left:1.0pt solid black'>79       </td>
+ <td>PL10*130            </td>
+ <td class=xl03 x:num>2    </td>
+ <td>S235JR  </td>
+ <td class=xl03 x:num>    441</td>
+ <td class=xl02 x:num>    0.1</td>
+ <td class=xl02 x:num>     4.5</td>
+ <td class=xl02 x:num>      8.9</td>
+ <td style='border-right:1.0pt solid black'>RAIDISSEUR   </td>
+</tr>
+<tr>
+ <td class=xl02 style='border-left:1.0pt solid black'>113      </td>
+ <td>PL12*130            </td>
+ <td class=xl03 x:num>2    </td>
+ <td>S235JR  </td>
+ <td class=xl03 x:num>    355</td>
+ <td class=xl02 x:num>    0.1</td>
+ <td class=xl02 x:num>     4.3</td>
+ <td class=xl02 x:num>      8.5</td>
+ <td style='border-right:1.0pt solid black'>RAIDISSEUR   </td>
+</tr>
+<tr>
+ <td style='background:silver;border-left:1.0pt solid black'>3-7     </td>
+ <td class=xl01 style='background:silver'>POUTRE              </td>
+ <td class=xl03 style='background:silver' x:num>1    </td>
+ <td style='background:silver'></td>
+ <td class=xl03 style='background:silver' x:num>  11437</td>
+ <td class=xl02 style='background:silver' x:num>   26.0</td>
+ <td class=xl02 style='background:silver' x:num>  1866.0</td>
+ <td class=xl02 style='background:silver' x:num>   1866.0</td>
+ <td style='background:silver;border-right:1.0pt solid black'> </td>
+</tr>
+<tr>
+ <td class=xl02 style='border-left:1.0pt solid black'>131      </td>
+ <td>HEA500              </td>
+ <td class=xl03 x:num>1    </td>
+ <td>S275JR  </td>
+ <td class=xl03 x:num>  11437</td>
+ <td class=xl02 x:num>   24.1</td>
+ <td class=xl02 x:num>  1773.2</td>
+ <td class=xl02 x:num>   1773.2</td>
+ <td style='border-right:1.0pt solid black'>POUTRE       </td>
+</tr>
+<tr>
+ <td class=xl02 style='border-left:1.0pt solid black'>1        </td>
+ <td>PL10*130            </td>
+ <td class=xl03 x:num>4    </td>
+ <td>S235JR  </td>
+ <td class=xl03 x:num>    441</td>
+ <td class=xl02 x:num>    0.1</td>
+ <td class=xl02 x:num>     4.4</td>
+ <td class=xl02 x:num>     17.7</td>
+ <td style='border-right:1.0pt solid black'>RAIDISSEUR   </td>
+</tr>
+<tr>
+ <td class=xl02 style='border-left:1.0pt solid black'>11       </td>
+ <td>PL20*260            </td>
+ <td class=xl03 x:num>1    </td>
+ <td>S235JR  </td>
+ <td class=xl03 x:num>    600</td>
+ <td class=xl02 x:num>    0.3</td>
+ <td class=xl02 x:num>    24.5</td>
+ <td class=xl02 x:num>     24.5</td>
+ <td style='border-right:1.0pt solid black'>PLATINE      </td>
+</tr>
+<tr>
+ <td class=xl02 style='border-left:1.0pt solid black'>13       </td>
+ <td>HEA200              </td>
+ <td class=xl03 x:num>1    </td>
+ <td>S275JR  </td>
+ <td class=xl03 x:num>    209</td>
+ <td class=xl02 x:num>    0.2</td>
+ <td class=xl02 x:num>     8.8</td>
+ <td class=xl02 x:num>      8.8</td>
+ <td style='border-right:1.0pt solid black'>MOIGNON      </td>
+</tr>
+<tr>
+ <td class=xl02 style='border-left:1.0pt solid black'>14       </td>
+ <td>PL25*300            </td>
+ <td class=xl03 x:num>1    </td>
+ <td>S235JR  </td>
+ <td class=xl03 x:num>    422</td>
+ <td class=xl02 x:num>    0.3</td>
+ <td class=xl02 x:num>    24.3</td>
+ <td class=xl02 x:num>     24.3</td>
+ <td style='border-right:1.0pt solid black'>AILE         </td>
+</tr>
+<tr>
+ <td class=xl02 style='border-left:1.0pt solid black'>79       </td>
+ <td>PL10*130            </td>
+ <td class=xl03 x:num>2    </td>
+ <td>S235JR  </td>
+ <td class=xl03 x:num>    441</td>
+ <td class=xl02 x:num>    0.1</td>
+ <td class=xl02 x:num>     4.5</td>
+ <td class=xl02 x:num>      8.9</td>
+ <td style='border-right:1.0pt solid black'>RAIDISSEUR   </td>
+</tr>
+<tr>
+ <td class=xl02 style='border-left:1.0pt solid black'>113      </td>
+ <td>PL12*130            </td>
+ <td class=xl03 x:num>2    </td>
+ <td>S235JR  </td>
+ <td class=xl03 x:num>    355</td>
+ <td class=xl02 x:num>    0.1</td>
+ <td class=xl02 x:num>     4.3</td>
+ <td class=xl02 x:num>      8.5</td>
+ <td style='border-right:1.0pt solid black'>RAIDISSEUR   </td>
+</tr>
+<tr>
+ <td style='background:silver;border-left:1.0pt solid black'>3-9     </td>
+ <td class=xl01 style='background:silver'>CONSOLE             </td>
+ <td class=xl03 style='background:silver' x:num>3    </td>
+ <td style='background:silver'></td>
+ <td class=xl03 style='background:silver' x:num>    400</td>
+ <td class=xl02 style='background:silver' x:num>    0.9</td>
+ <td class=xl02 style='background:silver' x:num>    49.8</td>
+ <td class=xl02 style='background:silver' x:num>    149.5</td>
+ <td style='background:silver;border-right:1.0pt solid black'> </td>
+</tr>
+<tr>
+ <td class=xl02 style='border-left:1.0pt solid black'>29       </td>
+ <td>PL20*400            </td>
+ <td class=xl03 x:num>3    </td>
+ <td>S235JR  </td>
+ <td class=xl03 x:num>    560</td>
+ <td class=xl02 x:num>    0.5</td>
+ <td class=xl02 x:num>    35.2</td>
+ <td class=xl02 x:num>    105.5</td>
+ <td style='border-right:1.0pt solid black'>CONSOLE      </td>
+</tr>
+<tr>
+ <td class=xl02 style='border-left:1.0pt solid black'>30       </td>
+ <td>PL20*111            </td>
+ <td class=xl03 x:num>3    </td>
+ <td>S235JR  </td>
+ <td class=xl03 x:num>    233</td>
+ <td class=xl02 x:num>    0.0</td>
+ <td class=xl02 x:num>     2.6</td>
+ <td class=xl02 x:num>      7.7</td>
+ <td style='border-right:1.0pt solid black'>VOILE        </td>
+</tr>
+<tr>
+ <td class=xl02 style='border-left:1.0pt solid black'>36       </td>
+ <td>PL10*194            </td>
+ <td class=xl03 x:num>6    </td>
+ <td>S235JR  </td>
+ <td class=xl03 x:num>    296</td>
+ <td class=xl02 x:num>    0.1</td>
+ <td class=xl02 x:num>     3.1</td>
+ <td class=xl02 x:num>     18.7</td>
+ <td style='border-right:1.0pt solid black'>VOILE        </td>
+</tr>
+<tr>
+ <td class=xl02 style='border-left:1.0pt solid black'>39       </td>
+ <td>PL10*213            </td>
+ <td class=xl03 x:num>3    </td>
+ <td>S235JR  </td>
+ <td class=xl03 x:num>    350</td>
+ <td class=xl02 x:num>    0.2</td>
+ <td class=xl02 x:num>     5.8</td>
+ <td class=xl02 x:num>     17.5</td>
+ <td style='border-right:1.0pt solid black'>APPUIS       </td>
+</tr>
+<tr>
+ <td style='background:silver;border-left:1.0pt solid black'>4-3     </td>
+ <td class=xl01 style='background:silver'>SOLIVE              </td>
+ <td class=xl03 style='background:silver' x:num>1    </td>
+ <td style='background:silver'></td>
+ <td class=xl03 style='background:silver' x:num>   5723</td>
+ <td class=xl02 style='background:silver' x:num>    6.8</td>
+ <td class=xl02 style='background:silver' x:num>   245.5</td>
+ <td class=xl02 style='background:silver' x:num>    245.5</td>
+ <td style='background:silver;border-right:1.0pt solid black'> </td>
+</tr>
+<tr>
+ <td class=xl02 style='border-left:1.0pt solid black'>153      </td>
+ <td>IPE300              </td>
+ <td class=xl03 x:num>1    </td>
+ <td>S275JR  </td>
+ <td class=xl03 x:num>   5723</td>
+ <td class=xl02 x:num>    6.6</td>
+ <td class=xl02 x:num>   241.7</td>
+ <td class=xl02 x:num>    241.7</td>
+ <td style='border-right:1.0pt solid black'>SOLIVE       </td>
+</tr>
+<tr>
+ <td class=xl02 style='border-left:1.0pt solid black'>100      </td>
+ <td>PL8*71              </td>
+ <td class=xl03 x:num>2    </td>
+ <td>S235JR  </td>
+ <td class=xl03 x:num>    275</td>
+ <td class=xl02 x:num>    0.0</td>
+ <td class=xl02 x:num>     1.2</td>
+ <td class=xl02 x:num>      2.4</td>
+ <td style='border-right:1.0pt solid black'>RAIDISSEUR   </td>
+</tr>
+<tr>
+ <td class=xl02 style='border-left:1.0pt solid black'>161      </td>
+ <td>PL8*80              </td>
+ <td class=xl03 x:num>1    </td>
+ <td>S235JR  </td>
+ <td class=xl03 x:num>    277</td>
+ <td class=xl02 x:num>    0.0</td>
+ <td class=xl02 x:num>     1.4</td>
+ <td class=xl02 x:num>      1.4</td>
+ <td style='border-right:1.0pt solid black'>RAIDISSEUR   </td>
+</tr>
+<tr>
+ <td style='background:silver;border-left:1.0pt solid black'>4-15    </td>
+ <td class=xl01 style='background:silver'>POUTRE              </td>
+ <td class=xl03 style='background:silver' x:num>1    </td>
+ <td style='background:silver'></td>
+ <td class=xl03 style='background:silver' x:num>   5014</td>
+ <td class=xl02 style='background:silver' x:num>    7.1</td>
+ <td class=xl02 style='background:silver' x:num>   296.9</td>
+ <td class=xl02 style='background:silver' x:num>    296.9</td>
+ <td style='background:silver;border-right:1.0pt solid black'> </td>
+</tr>
+<tr>
+ <td class=xl02 style='border-left:1.0pt solid black'>46       </td>
+ <td>IPE360              </td>
+ <td class=xl03 x:num>1    </td>
+ <td>S275JR  </td>
+ <td class=xl03 x:num>   5014</td>
+ <td class=xl02 x:num>    6.8</td>
+ <td class=xl02 x:num>   286.1</td>
+ <td class=xl02 x:num>    286.1</td>
+ <td style='border-right:1.0pt solid black'>POUTRE       </td>
+</tr>
+<tr>
+ <td class=xl02 style='border-left:1.0pt solid black'>33       </td>
+ <td>PL10*81             </td>
+ <td class=xl03 x:num>2    </td>
+ <td>S235JR  </td>
+ <td class=xl03 x:num>    331</td>
+ <td class=xl02 x:num>    0.1</td>
+ <td class=xl02 x:num>     2.1</td>
+ <td class=xl02 x:num>      4.1</td>
+ <td style='border-right:1.0pt solid black'>RAIDISSEUR   </td>
+</tr>
+<tr>
+ <td class=xl02 style='border-left:1.0pt solid black'>96       </td>
+ <td>PL8*81              </td>
+ <td class=xl03 x:num>1    </td>
+ <td>S235JR  </td>
+ <td class=xl03 x:num>    331</td>
+ <td class=xl02 x:num>    0.1</td>
+ <td class=xl02 x:num>     1.7</td>
+ <td class=xl02 x:num>      1.7</td>
+ <td style='border-right:1.0pt solid black'>RAIDISSEUR   </td>
+</tr>
+<tr>
+ <td class=xl02 style='border-left:1.0pt solid black'>99       </td>
+ <td>PL8*81              </td>
+ <td class=xl03 x:num>2    </td>
+ <td>S235JR  </td>
+ <td class=xl03 x:num>    331</td>
+ <td class=xl02 x:num>    0.1</td>
+ <td class=xl02 x:num>     1.7</td>
+ <td class=xl02 x:num>      3.3</td>
+ <td style='border-right:1.0pt solid black'>RAIDISSEUR   </td>
+</tr>
+<tr>
+ <td class=xl02 style='border-left:1.0pt solid black'>145      </td>
+ <td>PL8*80              </td>
+ <td class=xl03 x:num>1    </td>
+ <td>S235JR  </td>
+ <td class=xl03 x:num>    331</td>
+ <td class=xl02 x:num>    0.1</td>
+ <td class=xl02 x:num>     1.6</td>
+ <td class=xl02 x:num>      1.6</td>
+ <td style='border-right:1.0pt solid black'>RAIDISSEUR   </td>
+</tr>
+<tr>
+ <td style='background:silver;border-left:1.0pt solid black'>4-16    </td>
+ <td class=xl01 style='background:silver'>POUTRE              </td>
+ <td class=xl03 style='background:silver' x:num>1    </td>
+ <td style='background:silver'></td>
+ <td class=xl03 style='background:silver' x:num>   5760</td>
+ <td class=xl02 style='background:silver' x:num>    8.2</td>
+ <td class=xl02 style='background:silver' x:num>   339.5</td>
+ <td class=xl02 style='background:silver' x:num>    339.5</td>
+ <td style='background:silver;border-right:1.0pt solid black'> </td>
+</tr>
+<tr>
+ <td class=xl02 style='border-left:1.0pt solid black'>47       </td>
+ <td>IPE360              </td>
+ <td class=xl03 x:num>1    </td>
+ <td>S275JR  </td>
+ <td class=xl03 x:num>   5760</td>
+ <td class=xl02 x:num>    7.8</td>
+ <td class=xl02 x:num>   328.7</td>
+ <td class=xl02 x:num>    328.7</td>
+ <td style='border-right:1.0pt solid black'>POUTRE       </td>
+</tr>
+<tr>
+ <td class=xl02 style='border-left:1.0pt solid black'>33       </td>
+ <td>PL10*81             </td>
+ <td class=xl03 x:num>2    </td>
+ <td>S235JR  </td>
+ <td class=xl03 x:num>    331</td>
+ <td class=xl02 x:num>    0.1</td>
+ <td class=xl02 x:num>     2.1</td>
+ <td class=xl02 x:num>      4.1</td>
+ <td style='border-right:1.0pt solid black'>RAIDISSEUR   </td>
+</tr>
+<tr>
+ <td class=xl02 style='border-left:1.0pt solid black'>96       </td>
+ <td>PL8*81              </td>
+ <td class=xl03 x:num>1    </td>
+ <td>S235JR  </td>
+ <td class=xl03 x:num>    331</td>
+ <td class=xl02 x:num>    0.1</td>
+ <td class=xl02 x:num>     1.7</td>
+ <td class=xl02 x:num>      1.7</td>
+ <td style='border-right:1.0pt solid black'>RAIDISSEUR   </td>
+</tr>
+<tr>
+ <td class=xl02 style='border-left:1.0pt solid black'>99       </td>
+ <td>PL8*81              </td>
+ <td class=xl03 x:num>2    </td>
+ <td>S235JR  </td>
+ <td class=xl03 x:num>    331</td>
+ <td class=xl02 x:num>    0.1</td>
+ <td class=xl02 x:num>     1.7</td>
+ <td class=xl02 x:num>      3.3</td>
+ <td style='border-right:1.0pt solid black'>RAIDISSEUR   </td>
+</tr>
+<tr>
+ <td class=xl02 style='border-left:1.0pt solid black'>145      </td>
+ <td>PL8*80              </td>
+ <td class=xl03 x:num>1    </td>
+ <td>S235JR  </td>
+ <td class=xl03 x:num>    331</td>
+ <td class=xl02 x:num>    0.1</td>
+ <td class=xl02 x:num>     1.6</td>
+ <td class=xl02 x:num>      1.6</td>
+ <td style='border-right:1.0pt solid black'>RAIDISSEUR   </td>
+</tr>
+<tr>
+ <td style='background:silver;border-left:1.0pt solid black'>4-17    </td>
+ <td class=xl01 style='background:silver'>POUTRE              </td>
+ <td class=xl03 style='background:silver' x:num>1    </td>
+ <td style='background:silver'></td>
+ <td class=xl03 style='background:silver' x:num>   6332</td>
+ <td class=xl02 style='background:silver' x:num>    8.9</td>
+ <td class=xl02 style='background:silver' x:num>   372.1</td>
+ <td class=xl02 style='background:silver' x:num>    372.1</td>
+ <td style='background:silver;border-right:1.0pt solid black'> </td>
+</tr>
+<tr>
+ <td class=xl02 style='border-left:1.0pt solid black'>48       </td>
+ <td>IPE360              </td>
+ <td class=xl03 x:num>1    </td>
+ <td>S275JR  </td>
+ <td class=xl03 x:num>   6332</td>
+ <td class=xl02 x:num>    8.6</td>
+ <td class=xl02 x:num>   361.3</td>
+ <td class=xl02 x:num>    361.3</td>
+ <td style='border-right:1.0pt solid black'>POUTRE       </td>
+</tr>
+<tr>
+ <td class=xl02 style='border-left:1.0pt solid black'>33       </td>
+ <td>PL10*81             </td>
+ <td class=xl03 x:num>1    </td>
+ <td>S235JR  </td>
+ <td class=xl03 x:num>    331</td>
+ <td class=xl02 x:num>    0.1</td>
+ <td class=xl02 x:num>     2.1</td>
+ <td class=xl02 x:num>      2.1</td>
+ <td style='border-right:1.0pt solid black'>RAIDISSEUR   </td>
+</tr>
+<tr>
+ <td class=xl02 style='border-left:1.0pt solid black'>34       </td>
+ <td>PL10*81             </td>
+ <td class=xl03 x:num>1    </td>
+ <td>S235JR  </td>
+ <td class=xl03 x:num>    331</td>
+ <td class=xl02 x:num>    0.1</td>
+ <td class=xl02 x:num>     2.1</td>
+ <td class=xl02 x:num>      2.1</td>
+ <td style='border-right:1.0pt solid black'>RAIDISSEUR   </td>
+</tr>
+<tr>
+ <td class=xl02 style='border-left:1.0pt solid black'>96       </td>
+ <td>PL8*81              </td>
+ <td class=xl03 x:num>1    </td>
+ <td>S235JR  </td>
+ <td class=xl03 x:num>    331</td>
+ <td class=xl02 x:num>    0.1</td>
+ <td class=xl02 x:num>     1.7</td>
+ <td class=xl02 x:num>      1.7</td>
+ <td style='border-right:1.0pt solid black'>RAIDISSEUR   </td>
+</tr>
+<tr>
+ <td class=xl02 style='border-left:1.0pt solid black'>97       </td>
+ <td>PL8*80              </td>
+ <td class=xl03 x:num>1    </td>
+ <td>S235JR  </td>
+ <td class=xl03 x:num>    331</td>
+ <td class=xl02 x:num>    0.1</td>
+ <td class=xl02 x:num>     1.6</td>
+ <td class=xl02 x:num>      1.6</td>
+ <td style='border-right:1.0pt solid black'>RAIDISSEUR   </td>
+</tr>
+<tr>
+ <td class=xl02 style='border-left:1.0pt solid black'>99       </td>
+ <td>PL8*81              </td>
+ <td class=xl03 x:num>2    </td>
+ <td>S235JR  </td>
+ <td class=xl03 x:num>    331</td>
+ <td class=xl02 x:num>    0.1</td>
+ <td class=xl02 x:num>     1.7</td>
+ <td class=xl02 x:num>      3.3</td>
+ <td style='border-right:1.0pt solid black'>RAIDISSEUR   </td>
+</tr>
+<tr>
+ <td style='background:silver;border-left:1.0pt solid black'>4-18    </td>
+ <td class=xl01 style='background:silver'>POUTRE              </td>
+ <td class=xl03 style='background:silver' x:num>1    </td>
+ <td style='background:silver'></td>
+ <td class=xl03 style='background:silver' x:num>   6685</td>
+ <td class=xl02 style='background:silver' x:num>    9.4</td>
+ <td class=xl02 style='background:silver' x:num>   392.3</td>
+ <td class=xl02 style='background:silver' x:num>    392.3</td>
+ <td style='background:silver;border-right:1.0pt solid black'> </td>
+</tr>
+<tr>
+ <td class=xl02 style='border-left:1.0pt solid black'>44       </td>
+ <td>IPE360              </td>
+ <td class=xl03 x:num>1    </td>
+ <td>S275JR  </td>
+ <td class=xl03 x:num>   6685</td>
+ <td class=xl02 x:num>    9.0</td>
+ <td class=xl02 x:num>   381.5</td>
+ <td class=xl02 x:num>    381.5</td>
+ <td style='border-right:1.0pt solid black'>POUTRE       </td>
+</tr>
+<tr>
+ <td class=xl02 style='border-left:1.0pt solid black'>34       </td>
+ <td>PL10*81             </td>
+ <td class=xl03 x:num>2    </td>
+ <td>S235JR  </td>
+ <td class=xl03 x:num>    331</td>
+ <td class=xl02 x:num>    0.1</td>
+ <td class=xl02 x:num>     2.1</td>
+ <td class=xl02 x:num>      4.1</td>
+ <td style='border-right:1.0pt solid black'>RAIDISSEUR   </td>
+</tr>
+<tr>
+ <td class=xl02 style='border-left:1.0pt solid black'>97       </td>
+ <td>PL8*80              </td>
+ <td class=xl03 x:num>2    </td>
+ <td>S235JR  </td>
+ <td class=xl03 x:num>    331</td>
+ <td class=xl02 x:num>    0.1</td>
+ <td class=xl02 x:num>     1.6</td>
+ <td class=xl02 x:num>      3.3</td>
+ <td style='border-right:1.0pt solid black'>RAIDISSEUR   </td>
+</tr>
+<tr>
+ <td class=xl02 style='border-left:1.0pt solid black'>99       </td>
+ <td>PL8*81              </td>
+ <td class=xl03 x:num>2    </td>
+ <td>S235JR  </td>
+ <td class=xl03 x:num>    331</td>
+ <td class=xl02 x:num>    0.1</td>
+ <td class=xl02 x:num>     1.7</td>
+ <td class=xl02 x:num>      3.3</td>
+ <td style='border-right:1.0pt solid black'>RAIDISSEUR   </td>
+</tr>
+<tr>
+ <td style='background:silver;border-left:1.0pt solid black'>4-19    </td>
+ <td class=xl01 style='background:silver'>POUTRE              </td>
+ <td class=xl03 style='background:silver' x:num>1    </td>
+ <td style='background:silver'></td>
+ <td class=xl03 style='background:silver' x:num>   6894</td>
+ <td class=xl02 style='background:silver' x:num>    9.7</td>
+ <td class=xl02 style='background:silver' x:num>   404.2</td>
+ <td class=xl02 style='background:silver' x:num>    404.2</td>
+ <td style='background:silver;border-right:1.0pt solid black'> </td>
+</tr>
+<tr>
+ <td class=xl02 style='border-left:1.0pt solid black'>45       </td>
+ <td>IPE360              </td>
+ <td class=xl03 x:num>1    </td>
+ <td>S275JR  </td>
+ <td class=xl03 x:num>   6894</td>
+ <td class=xl02 x:num>    9.3</td>
+ <td class=xl02 x:num>   393.5</td>
+ <td class=xl02 x:num>    393.5</td>
+ <td style='border-right:1.0pt solid black'>POUTRE       </td>
+</tr>
+<tr>
+ <td class=xl02 style='border-left:1.0pt solid black'>34       </td>
+ <td>PL10*81             </td>
+ <td class=xl03 x:num>2    </td>
+ <td>S235JR  </td>
+ <td class=xl03 x:num>    331</td>
+ <td class=xl02 x:num>    0.1</td>
+ <td class=xl02 x:num>     2.1</td>
+ <td class=xl02 x:num>      4.1</td>
+ <td style='border-right:1.0pt solid black'>RAIDISSEUR   </td>
+</tr>
+<tr>
+ <td class=xl02 style='border-left:1.0pt solid black'>97       </td>
+ <td>PL8*81              </td>
+ <td class=xl03 x:num>2    </td>
+ <td>S235JR  </td>
+ <td class=xl03 x:num>    331</td>
+ <td class=xl02 x:num>    0.1</td>
+ <td class=xl02 x:num>     1.7</td>
+ <td class=xl02 x:num>      3.3</td>
+ <td style='border-right:1.0pt solid black'>RAIDISSEUR   </td>
+</tr>
+<tr>
+ <td class=xl02 style='border-left:1.0pt solid black'>99       </td>
+ <td>PL8*81              </td>
+ <td class=xl03 x:num>2    </td>
+ <td>S235JR  </td>
+ <td class=xl03 x:num>    331</td>
+ <td class=xl02 x:num>    0.1</td>
+ <td class=xl02 x:num>     1.7</td>
+ <td class=xl02 x:num>      3.3</td>
+ <td style='border-right:1.0pt solid black'>RAIDISSEUR   </td>
+</tr>
+<tr>
+ <td style='background:silver;border-left:1.0pt solid black'>4-21    </td>
+ <td class=xl01 style='background:silver'>SOLIVE              </td>
+ <td class=xl03 style='background:silver' x:num>1    </td>
+ <td style='background:silver'></td>
+ <td class=xl03 style='background:silver' x:num>   2925</td>
+ <td class=xl02 style='background:silver' x:num>    3.4</td>
+ <td class=xl02 style='background:silver' x:num>   124.9</td>
+ <td class=xl02 style='background:silver' x:num>    124.9</td>
+ <td style='background:silver;border-right:1.0pt solid black'> </td>
+</tr>
+<tr>
+ <td class=xl02 style='border-left:1.0pt solid black'>154      </td>
+ <td>IPE300              </td>
+ <td class=xl03 x:num>1    </td>
+ <td>S275JR  </td>
+ <td class=xl03 x:num>   2925</td>
+ <td class=xl02 x:num>    3.4</td>
+ <td class=xl02 x:num>   123.5</td>
+ <td class=xl02 x:num>    123.5</td>
+ <td style='border-right:1.0pt solid black'>SOLIVE       </td>
+</tr>
+<tr>
+ <td class=xl02 style='border-left:1.0pt solid black'>162      </td>
+ <td>PL8*82              </td>
+ <td class=xl03 x:num>1    </td>
+ <td>S235JR  </td>
+ <td class=xl03 x:num>    277</td>
+ <td class=xl02 x:num>    0.1</td>
+ <td class=xl02 x:num>     1.4</td>
+ <td class=xl02 x:num>      1.4</td>
+ <td style='border-right:1.0pt solid black'>RAIDISSEUR   </td>
+</tr>
+<tr>
+ <td style='background:silver;border-left:1.0pt solid black'>4-22    </td>
+ <td class=xl01 style='background:silver'>SOLIVE              </td>
+ <td class=xl03 style='background:silver' x:num>1    </td>
+ <td style='background:silver'></td>
+ <td class=xl03 style='background:silver' x:num>   5505</td>
+ <td class=xl02 style='background:silver' x:num>    6.5</td>
+ <td class=xl02 style='background:silver' x:num>   234.9</td>
+ <td class=xl02 style='background:silver' x:num>    234.9</td>
+ <td style='background:silver;border-right:1.0pt solid black'> </td>
+</tr>
+<tr>
+ <td class=xl02 style='border-left:1.0pt solid black'>54       </td>
+ <td>IPE300              </td>
+ <td class=xl03 x:num>1    </td>
+ <td>S275JR  </td>
+ <td class=xl03 x:num>   5505</td>
+ <td class=xl02 x:num>    6.4</td>
+ <td class=xl02 x:num>   232.5</td>
+ <td class=xl02 x:num>    232.5</td>
+ <td style='border-right:1.0pt solid black'>SOLIVE       </td>
+</tr>
+<tr>
+ <td class=xl02 style='border-left:1.0pt solid black'>100      </td>
+ <td>PL8*71              </td>
+ <td class=xl03 x:num>2    </td>
+ <td>S235JR  </td>
+ <td class=xl03 x:num>    275</td>
+ <td class=xl02 x:num>    0.0</td>
+ <td class=xl02 x:num>     1.2</td>
+ <td class=xl02 x:num>      2.4</td>
+ <td style='border-right:1.0pt solid black'>RAIDISSEUR   </td>
+</tr>
+<tr>
+ <td style='background:silver;border-left:1.0pt solid black'>4-23    </td>
+ <td class=xl01 style='background:silver'>SOLIVE              </td>
+ <td class=xl03 style='background:silver' x:num>1    </td>
+ <td style='background:silver'></td>
+ <td class=xl03 style='background:silver' x:num>   3436</td>
+ <td class=xl02 style='background:silver' x:num>    3.0</td>
+ <td class=xl02 style='background:silver' x:num>    91.4</td>
+ <td class=xl02 style='background:silver' x:num>     91.4</td>
+ <td style='background:silver;border-right:1.0pt solid black'> </td>
+</tr>
+<tr>
+ <td class=xl02 style='border-left:1.0pt solid black'>57       </td>
+ <td>IPE220              </td>
+ <td class=xl03 x:num>1    </td>
+ <td>S275JR  </td>
+ <td class=xl03 x:num>   3436</td>
+ <td class=xl02 x:num>    2.9</td>
+ <td class=xl02 x:num>    90.1</td>
+ <td class=xl02 x:num>     90.1</td>
+ <td style='border-right:1.0pt solid black'>SOLIVE       </td>
+</tr>
+<tr>
+ <td class=xl02 style='border-left:1.0pt solid black'>101      </td>
+ <td>PL8*52              </td>
+ <td class=xl03 x:num>2    </td>
+ <td>S235JR  </td>
+ <td class=xl03 x:num>    198</td>
+ <td class=xl02 x:num>    0.0</td>
+ <td class=xl02 x:num>     0.6</td>
+ <td class=xl02 x:num>      1.3</td>
+ <td style='border-right:1.0pt solid black'>RAIDISSEUR   </td>
+</tr>
+<tr>
+ <td style='background:silver;border-left:1.0pt solid black'>4-24    </td>
+ <td class=xl01 style='background:silver'>SOLIVE              </td>
+ <td class=xl03 style='background:silver' x:num>1    </td>
+ <td style='background:silver'></td>
+ <td class=xl03 style='background:silver' x:num>   3450</td>
+ <td class=xl02 style='background:silver' x:num>    3.0</td>
+ <td class=xl02 style='background:silver' x:num>    91.7</td>
+ <td class=xl02 style='background:silver' x:num>     91.7</td>
+ <td style='background:silver;border-right:1.0pt solid black'> </td>
+</tr>
+<tr>
+ <td class=xl02 style='border-left:1.0pt solid black'>58       </td>
+ <td>IPE220              </td>
+ <td class=xl03 x:num>1    </td>
+ <td>S275JR  </td>
+ <td class=xl03 x:num>   3449</td>
+ <td class=xl02 x:num>    2.9</td>
+ <td class=xl02 x:num>    90.4</td>
+ <td class=xl02 x:num>     90.4</td>
+ <td style='border-right:1.0pt solid black'>SOLIVE       </td>
+</tr>
+<tr>
+ <td class=xl02 style='border-left:1.0pt solid black'>101      </td>
+ <td>PL8*52              </td>
+ <td class=xl03 x:num>2    </td>
+ <td>S235JR  </td>
+ <td class=xl03 x:num>    198</td>
+ <td class=xl02 x:num>    0.0</td>
+ <td class=xl02 x:num>     0.6</td>
+ <td class=xl02 x:num>      1.3</td>
+ <td style='border-right:1.0pt solid black'>RAIDISSEUR   </td>
+</tr>
+<tr>
+ <td style='background:silver;border-left:1.0pt solid black'>4-25    </td>
+ <td class=xl01 style='background:silver'>SOLIVE              </td>
+ <td class=xl03 style='background:silver' x:num>1    </td>
+ <td style='background:silver'></td>
+ <td class=xl03 style='background:silver' x:num>   3383</td>
+ <td class=xl02 style='background:silver' x:num>    2.9</td>
+ <td class=xl02 style='background:silver' x:num>    90.0</td>
+ <td class=xl02 style='background:silver' x:num>     90.0</td>
+ <td style='background:silver;border-right:1.0pt solid black'> </td>
+</tr>
+<tr>
+ <td class=xl02 style='border-left:1.0pt solid black'>59       </td>
+ <td>IPE220              </td>
+ <td class=xl03 x:num>1    </td>
+ <td>S275JR  </td>
+ <td class=xl03 x:num>   3383</td>
+ <td class=xl02 x:num>    2.9</td>
+ <td class=xl02 x:num>    88.7</td>
+ <td class=xl02 x:num>     88.7</td>
+ <td style='border-right:1.0pt solid black'>SOLIVE       </td>
+</tr>
+<tr>
+ <td class=xl02 style='border-left:1.0pt solid black'>101      </td>
+ <td>PL8*52              </td>
+ <td class=xl03 x:num>2    </td>
+ <td>S235JR  </td>
+ <td class=xl03 x:num>    198</td>
+ <td class=xl02 x:num>    0.0</td>
+ <td class=xl02 x:num>     0.6</td>
+ <td class=xl02 x:num>      1.3</td>
+ <td style='border-right:1.0pt solid black'>RAIDISSEUR   </td>
+</tr>
+<tr>
+ <td style='background:silver;border-left:1.0pt solid black'>4-27    </td>
+ <td class=xl01 style='background:silver'>FIXATION            </td>
+ <td class=xl03 style='background:silver' x:num>5    </td>
+ <td style='background:silver'></td>
+ <td class=xl03 style='background:silver' x:num>    247</td>
+ <td class=xl02 style='background:silver' x:num>    0.2</td>
+ <td class=xl02 style='background:silver' x:num>     9.7</td>
+ <td class=xl02 style='background:silver' x:num>     48.7</td>
+ <td style='background:silver;border-right:1.0pt solid black'> </td>
+</tr>
+<tr>
+ <td class=xl02 style='border-left:1.0pt solid black'>27       </td>
+ <td>PL20*160            </td>
+ <td class=xl03 x:num>5    </td>
+ <td>S235JR  </td>
+ <td class=xl03 x:num>    240</td>
+ <td class=xl02 x:num>    0.1</td>
+ <td class=xl02 x:num>     6.0</td>
+ <td class=xl02 x:num>     30.1</td>
+ <td style='border-right:1.0pt solid black'>FIXATION     </td>
+</tr>
+<tr>
+ <td class=xl02 style='border-left:1.0pt solid black'>110      </td>
+ <td>PL12*218            </td>
+ <td class=xl03 x:num>5    </td>
+ <td>S235JR  </td>
+ <td class=xl03 x:num>    247</td>
+ <td class=xl02 x:num>    0.1</td>
+ <td class=xl02 x:num>     3.7</td>
+ <td class=xl02 x:num>     18.6</td>
+ <td style='border-right:1.0pt solid black'>VOILE        </td>
+</tr>
+<tr>
+ <td style='background:silver;border-left:1.0pt solid black'>4-28    </td>
+ <td class=xl01 style='background:silver'>SOLIVE              </td>
+ <td class=xl03 style='background:silver' x:num>1    </td>
+ <td style='background:silver'></td>
+ <td class=xl03 style='background:silver' x:num>   6230</td>
+ <td class=xl02 style='background:silver' x:num>    7.3</td>
+ <td class=xl02 style='background:silver' x:num>   265.5</td>
+ <td class=xl02 style='background:silver' x:num>    265.5</td>
+ <td style='background:silver;border-right:1.0pt solid black'> </td>
+</tr>
+<tr>
+ <td class=xl02 style='border-left:1.0pt solid black'>52       </td>
+ <td>IPE300              </td>
+ <td class=xl03 x:num>1    </td>
+ <td>S275JR  </td>
+ <td class=xl03 x:num>   6230</td>
+ <td class=xl02 x:num>    7.2</td>
+ <td class=xl02 x:num>   263.1</td>
+ <td class=xl02 x:num>    263.1</td>
+ <td style='border-right:1.0pt solid black'>SOLIVE       </td>
+</tr>
+<tr>
+ <td class=xl02 style='border-left:1.0pt solid black'>100      </td>
+ <td>PL8*71              </td>
+ <td class=xl03 x:num>2    </td>
+ <td>S235JR  </td>
+ <td class=xl03 x:num>    275</td>
+ <td class=xl02 x:num>    0.0</td>
+ <td class=xl02 x:num>     1.2</td>
+ <td class=xl02 x:num>      2.4</td>
+ <td style='border-right:1.0pt solid black'>RAIDISSEUR   </td>
+</tr>
+<tr>
+ <td style='background:silver;border-left:1.0pt solid black'>4-29    </td>
+ <td class=xl01 style='background:silver'>FIXATION            </td>
+ <td class=xl03 style='background:silver' x:num>5    </td>
+ <td style='background:silver'></td>
+ <td class=xl03 style='background:silver' x:num>    214</td>
+ <td class=xl02 style='background:silver' x:num>    0.1</td>
+ <td class=xl02 style='background:silver' x:num>     8.0</td>
+ <td class=xl02 style='background:silver' x:num>     40.0</td>
+ <td style='background:silver;border-right:1.0pt solid black'> </td>
+</tr>
+<tr>
+ <td class=xl02 style='border-left:1.0pt solid black'>28       </td>
+ <td>PL20*160            </td>
+ <td class=xl03 x:num>5    </td>
+ <td>S235JR  </td>
+ <td class=xl03 x:num>    214</td>
+ <td class=xl02 x:num>    0.1</td>
+ <td class=xl02 x:num>     5.4</td>
+ <td class=xl02 x:num>     26.9</td>
+ <td style='border-right:1.0pt solid black'>FIXATION     </td>
+</tr>
+<tr>
+ <td class=xl02 style='border-left:1.0pt solid black'>112      </td>
+ <td>PL12*155            </td>
+ <td class=xl03 x:num>5    </td>
+ <td>S235JR  </td>
+ <td class=xl03 x:num>    200</td>
+ <td class=xl02 x:num>    0.1</td>
+ <td class=xl02 x:num>     2.6</td>
+ <td class=xl02 x:num>     13.1</td>
+ <td style='border-right:1.0pt solid black'>VOILE        </td>
+</tr>
+<tr>
+ <td style='background:silver;border-left:1.0pt solid black'>4-32    </td>
+ <td class=xl01 style='background:silver'>SOLIVE              </td>
+ <td class=xl03 style='background:silver' x:num>1    </td>
+ <td style='background:silver'></td>
+ <td class=xl03 style='background:silver' x:num>   1777</td>
+ <td class=xl02 style='background:silver' x:num>    1.6</td>
+ <td class=xl02 style='background:silver' x:num>    48.8</td>
+ <td class=xl02 style='background:silver' x:num>     48.8</td>
+ <td style='background:silver;border-right:1.0pt solid black'> </td>
+</tr>
+<tr>
+ <td class=xl02 style='border-left:1.0pt solid black'>98       </td>
+ <td>IPE220              </td>
+ <td class=xl03 x:num>1    </td>
+ <td>S275JR  </td>
+ <td class=xl03 x:num>   1777</td>
+ <td class=xl02 x:num>    1.5</td>
+ <td class=xl02 x:num>    46.6</td>
+ <td class=xl02 x:num>     46.6</td>
+ <td style='border-right:1.0pt solid black'>SOLIVE       </td>
+</tr>
+<tr>
+ <td class=xl02 style='border-left:1.0pt solid black'>101      </td>
+ <td>PL8*52              </td>
+ <td class=xl03 x:num>2    </td>
+ <td>S235JR  </td>
+ <td class=xl03 x:num>    198</td>
+ <td class=xl02 x:num>    0.0</td>
+ <td class=xl02 x:num>     0.6</td>
+ <td class=xl02 x:num>      1.3</td>
+ <td style='border-right:1.0pt solid black'>RAIDISSEUR   </td>
+</tr>
+<tr>
+ <td class=xl02 style='border-left:1.0pt solid black'>136      </td>
+ <td>PL8*77              </td>
+ <td class=xl03 x:num>1    </td>
+ <td>S235JR  </td>
+ <td class=xl03 x:num>    198</td>
+ <td class=xl02 x:num>    0.0</td>
+ <td class=xl02 x:num>     1.0</td>
+ <td class=xl02 x:num>      1.0</td>
+ <td style='border-right:1.0pt solid black'>RAIDISSEUR   </td>
+</tr>
+<tr>
+ <td style='background:silver;border-left:1.0pt solid black'>4-40    </td>
+ <td class=xl01 style='background:silver'>SOLIVE              </td>
+ <td class=xl03 style='background:silver' x:num>1    </td>
+ <td style='background:silver'></td>
+ <td class=xl03 style='background:silver' x:num>   3484</td>
+ <td class=xl02 style='background:silver' x:num>    3.0</td>
+ <td class=xl02 style='background:silver' x:num>    92.6</td>
+ <td class=xl02 style='background:silver' x:num>     92.6</td>
+ <td style='background:silver;border-right:1.0pt solid black'> </td>
+</tr>
+<tr>
+ <td class=xl02 style='border-left:1.0pt solid black'>60       </td>
+ <td>IPE220              </td>
+ <td class=xl03 x:num>1    </td>
+ <td>S275JR  </td>
+ <td class=xl03 x:num>   3483</td>
+ <td class=xl02 x:num>    3.0</td>
+ <td class=xl02 x:num>    91.3</td>
+ <td class=xl02 x:num>     91.3</td>
+ <td style='border-right:1.0pt solid black'>SOLIVE       </td>
+</tr>
+<tr>
+ <td class=xl02 style='border-left:1.0pt solid black'>101      </td>
+ <td>PL8*52              </td>
+ <td class=xl03 x:num>2    </td>
+ <td>S235JR  </td>
+ <td class=xl03 x:num>    198</td>
+ <td class=xl02 x:num>    0.0</td>
+ <td class=xl02 x:num>     0.6</td>
+ <td class=xl02 x:num>      1.3</td>
+ <td style='border-right:1.0pt solid black'>RAIDISSEUR   </td>
+</tr>
+<tr>
+ <td style='background:silver;border-left:1.0pt solid black'>13-1    </td>
+ <td class=xl01 style='background:silver'>ANCRAGE             </td>
+ <td class=xl03 style='background:silver' x:num>5    </td>
+ <td style='background:silver'></td>
+ <td class=xl03 style='background:silver' x:num>    600</td>
+ <td class=xl02 style='background:silver' x:num>    0.4</td>
+ <td class=xl02 style='background:silver' x:num>    15.1</td>
+ <td class=xl02 style='background:silver' x:num>     75.3</td>
+ <td style='background:silver;border-right:1.0pt solid black'> </td>
+</tr>
+<tr>
+ <td class=xl02 style='border-left:1.0pt solid black'>167      </td>
+ <td>PL10*260            </td>
+ <td class=xl03 x:num>5    </td>
+ <td>S235JR  </td>
+ <td class=xl03 x:num>    600</td>
+ <td class=xl02 x:num>    0.3</td>
+ <td class=xl02 x:num>    12.2</td>
+ <td class=xl02 x:num>     61.2</td>
+ <td style='border-right:1.0pt solid black'>ANCRAGE      </td>
+</tr>
+<tr>
+ <td class=xl02 style='border-left:1.0pt solid black'>168      </td>
+ <td>PL8*80              </td>
+ <td class=xl03 x:num>10   </td>
+ <td>S235JR  </td>
+ <td class=xl03 x:num>     80</td>
+ <td class=xl02 x:num>    0.0</td>
+ <td class=xl02 x:num>     0.4</td>
+ <td class=xl02 x:num>      4.0</td>
+ <td style='border-right:1.0pt solid black'>ANCRAGE      </td>
+</tr>
+<tr>
+ <td class=xl02 style='border-left:1.0pt solid black'>169      </td>
+ <td>TUBE-C-60*60*3      </td>
+ <td class=xl03 x:num>10   </td>
+ <td>S235JR  </td>
+ <td class=xl03 x:num>     90</td>
+ <td class=xl02 x:num>    0.0</td>
+ <td class=xl02 x:num>     0.5</td>
+ <td class=xl02 x:num>      4.7</td>
+ <td style='border-right:1.0pt solid black'>ANCRAGE      </td>
+</tr>
+<tr>
+ <td class=xl02 style='border-left:1.0pt solid black'>170      </td>
+ <td>ECROU_M24           </td>
+ <td class=xl03 x:num>10   </td>
+ <td>S235JR  </td>
+ <td class=xl03 x:num>     20</td>
+ <td class=xl02 x:num>    0.0</td>
+ <td class=xl02 x:num>     0.2</td>
+ <td class=xl02 x:num>      1.8</td>
+ <td style='border-right:1.0pt solid black'>ANCRAGE      </td>
+</tr>
+<tr>
+ <td class=xl02 style='border-left:1.0pt solid black'>171      </td>
+ <td>IPE100              </td>
+ <td class=xl03 x:num>5    </td>
+ <td>S235JR  </td>
+ <td class=xl03 x:num>     90</td>
+ <td class=xl02 x:num>    0.0</td>
+ <td class=xl02 x:num>     0.7</td>
+ <td class=xl02 x:num>      3.6</td>
+ <td style='border-right:1.0pt solid black'>BECHE        </td>
+</tr>
+<tr style='height:6pt'>
+ <td colspan=9 class=xl04 style='border-top:1.0pt solid black;border-bottom:1.0pt solid black'></td>
+</tr>
+<tr>
+ <td colspan=4 class=xl21></td>
+ <td class=xl23>Total</td>
+ <td class=xl24 x:num>  223.3</td>
+ <td class=xl21>&nbsp;</td>
+ <td class=xl24 x:num>  13163.7</td>
+ <td class=xl21 style='border-right:1.0pt solid black'>&nbsp;</td>
+</tr>
+</table>
+</body>
+</html>

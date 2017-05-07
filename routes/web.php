@@ -14,6 +14,7 @@ use Illuminate\Contracts\View\View;
 */
 
 Route::resource('affaire','AffaireController');
+Route::resource('lot','LotController');
 Route::resource('piece','PieceController');
 Route::resource('colis','ColisController',['parameters' => [
   'colis' => 'colis'

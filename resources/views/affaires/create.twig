@@ -19,6 +19,10 @@
 		<div class="form-group">
 			{{ form_label('ref_affaire','Reférence Affaire') }}
 			{{ form_text('ref_affaire', (affaires.ref_affaire) ) }}
+
+
+			{{ form_label('nb_lots','Nombre de Lots') }}
+			{{ form_selectRange('nb_lots', 1, 10) }}
 		</div>
 
 

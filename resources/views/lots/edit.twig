@@ -1,0 +1,55 @@
+{% extends 'layout.app' %}
+
+
+{% block content %}
+
+	<div class="container">
+
+	{% if errors.any() %}
+		<ul>
+			{% for errors in errors.all() %}
+				<li> {{ error }} </li>
+			{% endfor %}
+		</ul>
+	{% endif %}
+
+	Ceci est la vue d'édition des adresses.
+
+
+	{{ form_open({'method': 'PUT', url:route('adresse.update',[adresses.id]) }) }}
+
+	<div class="form-group">
+		{{ form_label('name','Nom Adresse') }}
+		{{ form_text('name', (adresses.name) ) }}
+
+		{{ form_label('type','Type d\'adresse') }}
+		{{ form_select('type',
+										['Peinture','Chantier','Galva','Livraison'],
+										(adresses.type)
+									)
+		}}
+
+		{{ form_label('street','Nom de la voie') }}
+		{{ form_text('street', (adresses.street) ) }}
+
+		{{ form_label('option','Complément') }}
+		{{ form_text('option', (adresses.option) ) }}
+
+		{{ form_label('number','Numéro') }}
+		{{ form_text('number', (adresses.number) ) }}
+
+		{{ form_label('postal_code','Code Postal') }}
+		{{ form_text('postal_code', (adresses.postal_code) ) }}
+
+		{{ form_label('city','Ville') }}
+		{{ form_text('city', (adresses.city) ) }}
+
+		{{ form_label('state','Pays') }}
+		{{ form_text('state', (adresses.state) ) }}
+
+	{{ form_submit('save', {'class':'btn btn-primary'}) }}
+
+	{{ form_close() }}
+
+	</div>
+{% endblock %}

@@ -15,7 +15,7 @@ class CreatePiecesTable extends Migration
     {
       Schema::create('pieces', function (Blueprint $table) {
           $table->increments('id');
-          $table->unsignedInteger('id_affaire') -> nullable()-> default(null);
+          $table->unsignedInteger('id_lot') -> nullable()-> default(null);
           $table->string('ref_piece');
           $table->unsignedInteger('quantity') -> default(0);
           $table->float('unit_weight') -> default(0);
@@ -27,8 +27,8 @@ class CreatePiecesTable extends Migration
           $table->unsignedInteger('updated_by') -> nullable() -> default(null);
 
           /* Unicity and constraints*/
-          $table->unique(['id_affaire', 'ref_piece']);
-          $table->foreign('id_affaire') -> references('id')->on('affaires');
+          $table->unique(['id_lot', 'ref_piece']);
+          $table->foreign('id_lot') -> references('id')->on('lots');
       });
     }
 

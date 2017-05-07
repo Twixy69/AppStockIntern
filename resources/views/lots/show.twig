@@ -1,0 +1,26 @@
+{% extends 'layout.app' %}
+
+
+{% block content %}
+
+{{ debug() }}
+Vue SHOW d'une adresse.
+
+    <h1>{{ adresses.name }}</h1>
+    <p>Type adresse : {{ adresses.type }}</p>
+    <p>Voie : {{ adresses.street }}</p>
+    <p>Supplément : {{ adresses.option }}</p>
+    <p>Numéro voie : {{ adresses.number }}</p>
+    <p>Code Postal : {{ adresses.postal_code }}</p>
+    <p>Ville : {{ adresses.city }}</p>
+    <p>Pays : {{ adresses.state }}</p>
+
+    <p> <a class="btn btn-primary" href="{{route('adresse.edit',adresses)}}"> EDIT</a> </p>
+
+	{{ form_open({'method': 'DELETE', url:route('adresse.destroy',adresses) }) }}
+    {{ form_submit('Delete', {'class':'btn btn-danger'}) }}
+	{{ form_close() }}
+
+    <p> <a class="btn btn-primary" href="{{route('adresse.index')}}">Retour</a> </p>
+
+{% endblock %}
