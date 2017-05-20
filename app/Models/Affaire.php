@@ -10,4 +10,7 @@ class Affaire extends Model
     protected $table = 'affaires';
     protected $guarded = ['id'];
 
+    public function Lot(){
+      return $this->hasMany('App\Models\Lot','id_affaire');
+    }
 }

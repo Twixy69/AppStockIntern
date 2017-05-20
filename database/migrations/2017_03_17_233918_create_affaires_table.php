@@ -15,7 +15,7 @@ class CreateAffairesTable extends Migration
     {
       Schema::create('affaires', function (Blueprint $table) {
           $table->increments('id');
-          $table->integer('ref_affaire');
+          $table->integer('ref_affaire') -> nullable() -> default(null);
           $table->unsignedInteger('created_by') -> nullable() -> default(null);
 
       });

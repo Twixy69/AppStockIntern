@@ -1,7 +1,9 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\ModelControllers;
 
+
+use App\Http\Controllers\Controller;
 use App\Models\Lot;
 use Illuminate\Http\Request;
 

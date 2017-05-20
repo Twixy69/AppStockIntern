@@ -1,9 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\ModelControllers;
+
+
+use App\Http\Controllers\Controller;
 
 use App\Models\Piece;
-use App\Models\Affaire;
+use App\Models\Lot;
 use Illuminate\Http\Request;
 
 class PieceController extends Controller
@@ -21,7 +24,7 @@ class PieceController extends Controller
     public function index()
     {
       $pieces = Piece::get();
-      return view('pieces.index',compact('pieces'));
+      return view('models/pieces/index',compact('pieces'));
     }
 
     /**
@@ -31,8 +34,8 @@ class PieceController extends Controller
      */
     public function create()
     {
-        $idAffaire = Affaire::pluck('ref_affaire','id');
-        return view('pieces.create',compact('idAffaire'));
+        $idLot = Lot::pluck('id_affaire','id');
+        return view('models/pieces/create',compact('idLot'));
     }
 
     /**
@@ -58,7 +61,7 @@ class PieceController extends Controller
     {
         $pieces = new Piece;
         $pieces = Piece::find($piece);
-        return view('pieces/show',compact('pieces'));
+        return view('models/pieces/show',compact('pieces'));
     }
 
     /**
@@ -71,8 +74,8 @@ class PieceController extends Controller
     {
         $pieces = new Piece;
         $pieces = Piece::find($piece);
-        $idAffaire = Affaire::pluck('ref_affaire','id');
-        return view('pieces/edit',compact('pieces','idAffaire'));
+        $idLot = Lot::pluck('id_affaire','id');
+        return view('models/pieces/edit',compact('pieces','idLot'));
     }
 
     /**

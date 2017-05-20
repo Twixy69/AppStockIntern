@@ -1,7 +1,9 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\ModelControllers;
 
+
+use App\Http\Controllers\Controller;
 use App\Models\Adresse;
 use Illuminate\Http\Request;
 
@@ -20,7 +22,7 @@ class AdresseController extends Controller
     public function index()
     {
         $adresses = Adresse::get();
-        return view('adresses/index',compact('adresses'));
+        return view('models/adresses/index',compact('adresses'));
     }
 
     /**
@@ -30,7 +32,7 @@ class AdresseController extends Controller
      */
     public function create()
     {
-        return view('adresses/create');
+        return view('models/adresses/create');
     }
 
     /**
@@ -56,7 +58,7 @@ class AdresseController extends Controller
     {
         $adresses = new Adresse;
         $adresses = Adresse::find($adresse);
-        return view('adresses/show',compact('adresses'));
+        return view('models/adresses/show',compact('adresses'));
     }
 
     /**
@@ -69,7 +71,7 @@ class AdresseController extends Controller
     {
         $adresses = new Adresse;
         $adresses = Adresse::find($adresse);
-        return view('adresses/edit');
+        return view('models/adresses/edit');
     }
 
     /**

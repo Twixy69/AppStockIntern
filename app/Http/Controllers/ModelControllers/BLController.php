@@ -1,12 +1,14 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\ModelControllers;
 
-use App\Models\Colis;
+
+use App\Http\Controllers\Controller;
+use App\Models\BL;
 use App\Models\Adresse;
 use Illuminate\Http\Request;
 
-class ColisController extends Controller
+class BLController extends Controller
 {
 
     public function __construct()
@@ -21,9 +23,8 @@ class ColisController extends Controller
      */
     public function index()
     {
-      $colis_s = Colis::get();
-      return view('colis_s/index',compact('colis_s'));
-
+      $b_ls = BL::get();
+      return view('models/b_ls/index',compact('b_ls'));
     }
 
     /**
@@ -34,7 +35,7 @@ class ColisController extends Controller
     public function create()
     {
         $idAdress = Adresse::pluck('name','id');
-        return view('colis_s/create',compact('idAdress'));
+        return view('models/b_ls/create',compact('idAdress'));
     }
 
     /**
@@ -45,70 +46,70 @@ class ColisController extends Controller
      */
     public function store(Request $request)
     {
-        $colis_s = new Colis($request->all());
-        $colis_s->save();
-        return redirect()->route('colis.index');
+      $b_ls = new BL($request->all());
+      $b_ls->save();
+      return redirect()->route('b_l.index');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  App\Models\Colis  $colis
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($colis)
+    public function show($b_l)
     {
-        $colis_s = new Colis;
-        $colis_s = Colis::find($colis);
+        $b_ls = new BL;
+        $b_ls = BL::find($b_l);
 
-        $pieces = $colis_s->pieces()->get();
+        $colis_s = $b_ls->colis()->get();
 
 
-        return view('colis_s/show',compact('colis_s','pieces'));
+        return view('models/b_ls/show',compact('b_ls','colis_s'));
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  App\Models\Colis  $colis
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($colis)
+    public function edit($b_l)
     {
-        $colis_s = new Colis;
-        $colis_s = Colis::find($colis);
+        $b_ls = new BL;
+        $b_ls = BL::find($b_l);
         $idAdress = Adresse::pluck('name','id');
-        return view('colis_s/edit',compact('colis_s','idAdress'));
+        return view('models/b_ls/edit',compact('b_ls','idAdress'));
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Colis  $colis
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update($colis, Request $request)
+    public function update($b_l, Request $request)
     {
-        $colis_s = new Colis;
-        $colis_s = Colis::find($colis);
+            $b_ls = new BL;
+            $b_ls = BL::find($b_l);
 
-        $colis_s->update($request->all());
-        $colis_s->save;
+            $b_ls->update($request->all());
+            $b_ls->save;
 
-        return redirect()->route('colis.show', [$colis_s]);
+            return redirect()->route('b_l.edit', [$b_ls]);
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Colis  $colis
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($colis)
+    public function destroy($b_l)
     {
-        Colis::destroy($colis);
+        BL::destroy($b_l);
 
-        return redirect()->route('colis.index');
+        return redirect()->route('b_l.index');
     }
 }

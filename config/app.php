@@ -170,7 +170,7 @@ return [
         TwigBridge\ServiceProvider::class,  // twig
         Barryvdh\Debugbar\ServiceProvider::class, // dev - debugbar
         Maatwebsite\Excel\ExcelServiceProvider::class, // import csv - export php
-
+        Fx3costa\LaravelChartJs\Providers\ChartjsServiceProvider::class, // chart js class
         /*
         * Package deleted from laravel's core
         */

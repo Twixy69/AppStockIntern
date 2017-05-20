@@ -106,10 +106,22 @@ class LotTableSeeder extends Seeder {
       DB::table('lots')->insert([
         'id_affaire' => '1',
         'ref_lot'=> 'A',
+        'manufactured_weight' => '893',
+        'mounted_weight' => '1000',
+        'painted_weight' => '1200',
+        'sent_selled_weight' => '0',
+        'sent_weight' => '500',
+        'theorical_weight' => '7500',
         ]);
       DB::table('lots')->insert([
         'id_affaire' => '1',
         'ref_lot'=> 'B',
+        'manufactured_weight' => '300',
+        'mounted_weight' => '656',
+        'painted_weight' => '200',
+        'sent_selled_weight' => '0',
+        'sent_weight' => '1787',
+        'theorical_weight' => '4000',
         ]);
     }
 }

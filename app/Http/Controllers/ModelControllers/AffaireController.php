@@ -1,7 +1,9 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\ModelControllers;
 
+
+use App\Http\Controllers\Controller;
 
 use App\Models\Lot;
 use App\Models\Affaire;
@@ -24,7 +26,7 @@ class AffaireController extends Controller
     public function index()
     {
         $affaires = Affaire::get();
-        return view('affaires/index',compact('affaires'));
+        return view('models/affaires/index',compact('affaires'));
     }
 
     /**
@@ -35,7 +37,7 @@ class AffaireController extends Controller
     public function create()
     {
         $idAdress = Adresse::pluck('name','id');
-        return view('affaires/create',compact('idAdress'));
+        return view('models/affaires/create',compact('idAdress'));
     }
 
     /**
@@ -46,21 +48,21 @@ class AffaireController extends Controller
      */
     public function store(Request $request)
     {
-        $affaires = new Affaire($request->except('nb_lots'));
-        $affaires->save();
+
+        $affaire = Affaire::create($request->except('nb_lots'));
 
         $alphabet = range('A','J');
 
         for ($i=0; $i < (int)request()->nb_lots; $i++)
         {
-          $lot = new Lot;
-          $lot->id_affaire = (int)request()->ref_affaire;
-          $lot->ref_lot = $alphabet[$i];
-          $lot->save();
+          $lot = new Lot(['id_affaire'=>(int)request()->ref_affaire,'ref_lot'=>$alphabet[$i]]);
+
+          $affaire->Lot()->save($lot);
          }
 
         return redirect()->route('affaire.index');
     }
+
 
     /**
      * Display the specified resource.
@@ -72,7 +74,7 @@ class AffaireController extends Controller
     {
         $affaires = new Affaire;
         $affaires = Affaire::find($affaire);
-        return view('affaires/show',compact('affaires'));
+        return view('models/affaires/show',compact('affaires'));
     }
 
     /**
@@ -86,7 +88,7 @@ class AffaireController extends Controller
         $affaires = new Affaire;
         $affaires = Affaire::find($affaire);
         $idAdress = Adresse::pluck('name','id');
-        return view('affaires/edit',compact('affaires','idAdress'));
+        return view('models/affaires/edit',compact('affaires','idAdress'));
     }
 
     /**
