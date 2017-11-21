@@ -20,7 +20,7 @@ class CreateColisTable extends Migration
           $table->date('boxing_date')-> nullable() -> default(null);
           $table->date('expedition_date')-> nullable() -> default(null);
           $table->date('reception_date')-> nullable() -> default(null);
-          $table->enum('state',['creation','boxed','sending','receipt']) -> default('creation');
+          $table->enum('state',['noInfo','created','boxed','sent','receipt']) -> default('noInfo');
           $table->float('weight') -> default(0);
           $table->unsignedInteger('id_b_l') -> nullable() -> default(null);
 

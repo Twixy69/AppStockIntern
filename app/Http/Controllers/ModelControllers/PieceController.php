@@ -34,8 +34,10 @@ class PieceController extends Controller
      */
     public function create()
     {
-        $idLot = Lot::pluck('id_affaire','id');
-        return view('models/pieces/create',compact('idLot'));
+        $lots = Lot::whereHas('affaire', function ($query) {
+          $query->where('archived', '=', 0);
+        })->orderBy('id_affaire')->orderBy('ref_lot')->get();
+        return view('models/pieces/create',compact('lots'));
     }
 
     /**
@@ -74,8 +76,10 @@ class PieceController extends Controller
     {
         $pieces = new Piece;
         $pieces = Piece::find($piece);
-        $idLot = Lot::pluck('id_affaire','id');
-        return view('models/pieces/edit',compact('pieces','idLot'));
+        $lots = Lot::whereHas('affaire', function ($query) {
+          $query->where('archived', '=', 0);
+        })->orderBy('id_affaire')->orderBy('ref_lot')->get();
+        return view('models/pieces/edit',compact('pieces','lots'));
     }
 
     /**

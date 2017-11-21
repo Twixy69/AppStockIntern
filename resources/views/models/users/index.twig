@@ -1,0 +1,19 @@
+{% extends 'layout.app' %}
+
+
+{% block content %}
+
+{{ debug() }}
+Ceci est la vue des utilisateurs.
+
+{% for user in users %}
+    <h1><a href="{{ route('user.show',user)  }}">
+    	{{ user.name }}
+    </a></h1>
+
+    <p>{{ user.type }}</p>
+
+    <p> <a class="btn btn-primary" href="{{route('user.edit',user)}}"> EDIT</a> </p>
+{% endfor %}
+
+{% endblock %}

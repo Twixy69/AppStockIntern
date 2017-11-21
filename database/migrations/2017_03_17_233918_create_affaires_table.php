@@ -17,6 +17,7 @@ class CreateAffairesTable extends Migration
           $table->increments('id');
           $table->integer('ref_affaire') -> nullable() -> default(null);
           $table->unsignedInteger('created_by') -> nullable() -> default(null);
+          $table->boolean('archived') -> default(false);
 
       });
     }

@@ -4,13 +4,10 @@ namespace App\Http\Controllers\ModelControllers;
 
 
 use App\Http\Controllers\Controller;
-use App\Models\BL;
-use App\Models\Adresse;
-use Illuminate\Http\Request;
+use App\User;
 
-class BLController extends Controller
+class UserController extends Controller
 {
-
     public function __construct()
     {
         //$this->middleware('auth');
@@ -23,8 +20,8 @@ class BLController extends Controller
      */
     public function index()
     {
-      $b_ls = BL::get();
-      return view('models/b_ls/index',compact('b_ls'));
+        $users = User::get();
+        return view('models/users/index',compact('users'));
     }
 
     /**
@@ -34,8 +31,7 @@ class BLController extends Controller
      */
     public function create()
     {
-        $idAdress = Adresse::pluck('name','id');
-        return view('models/b_ls/create',compact('idAdress'));
+        return view('models/users/create');
     }
 
     /**
@@ -46,9 +42,9 @@ class BLController extends Controller
      */
     public function store(Request $request)
     {
-      $b_ls = new BL($request->all());
-      $b_ls->save();
-      return redirect()->route('b_l.index');
+        $users = new User($request->except(['updated_at','created_at']));
+        $users->save(['timestamps' => false]);
+        return redirect()->route('user.index');
     }
 
     /**
@@ -57,14 +53,11 @@ class BLController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($user)
     {
-        $b_l = BL::find($id);
-
-        $colis_s = $b_l->colis()->get();
-
-
-        return view('models/b_ls/show',compact('b_l','colis_s'));
+        $users = new User;
+        $users = User::find($user);
+        return view('models/users/show',compact('users'));
     }
 
     /**
@@ -73,14 +66,12 @@ class BLController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($user)
     {
-        $b_ls = new BL;
-        $b_ls = BL::find($id);
-        $idAdress = Adresse::pluck('name','id');
-        return view('models/b_ls/edit',compact('b_ls','idAdress'));
+        $users = new User;
+        $users = User::find($user);
+        return view('models/users/edit');
     }
-
 
     /**
      * Update the specified resource in storage.
@@ -89,14 +80,15 @@ class BLController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update($id, Request $request)
+    public function update(Request $request, $user)
     {
-            $b_l = BL::find($id);
+        $users = new User;
+        $users = User::find($user);
 
-            $b_l->update($request->all());
-            $b_l->save;
+        $users->update($request->except(['updated_at']));
+        $users->save;
 
-            return redirect()->route('b_l.edit', [$b_l]);
+        return redirect()->route('user.edit', [$users]);
     }
 
     /**
@@ -105,10 +97,11 @@ class BLController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($user)
     {
-        BL::destroy($id);
+        User::destroy($user);
 
-        return redirect()->route('b_l.index');
+        return redirect()->route('user.index');
     }
+
 }

@@ -93,6 +93,13 @@ class AffaireTableSeeder extends Seeder {
       DB::table('affaires')->insert([
         'ref_affaire' => '6529',
         'created_by' => '1',
+        'id_address' => '2',
+        'archived' => '1'
+      ]);
+
+      DB::table('affaires')->insert([
+        'ref_affaire' => '6530',
+        'created_by' => '1',
         'id_address' => '2'
       ]);
     }
@@ -104,7 +111,7 @@ class LotTableSeeder extends Seeder {
     {
       DB::table('lots')->truncate();
       DB::table('lots')->insert([
-        'id_affaire' => '1',
+        'id_affaire' => '2',
         'ref_lot'=> 'A',
         'manufactured_weight' => '893',
         'mounted_weight' => '1000',
@@ -123,6 +130,39 @@ class LotTableSeeder extends Seeder {
         'sent_weight' => '1787',
         'theorical_weight' => '4000',
         ]);
+
+      DB::table('lots')->insert([
+        'id_affaire' => '1',
+        'ref_lot'=> 'A',
+        'manufactured_weight' => '300',
+        'mounted_weight' => '656',
+        'painted_weight' => '200',
+        'sent_selled_weight' => '0',
+        'sent_weight' => '1787',
+        'theorical_weight' => '4000',
+        ]);
+
+      DB::table('lots')->insert([
+        'id_affaire' => '2',
+        'ref_lot'=> 'B',
+        'manufactured_weight' => '300',
+        'mounted_weight' => '656',
+        'painted_weight' => '200',
+        'sent_selled_weight' => '0',
+        'sent_weight' => '1787',
+        'theorical_weight' => '4000',
+        ]);
+
+      DB::table('lots')->insert([
+        'id_affaire' => '3',
+        'ref_lot'=> 'A',
+        'manufactured_weight' => '300',
+        'mounted_weight' => '656',
+        'painted_weight' => '200',
+        'sent_selled_weight' => '0',
+        'sent_weight' => '1787',
+        'theorical_weight' => '4000',
+        ]);
     }
 }
 
@@ -132,10 +172,10 @@ class BLTableSeeder extends Seeder {
     {
       DB::table('b_ls')->truncate();
       DB::table('b_ls')->insert([
-        'ref' => 'First BL',
+        'ref_b_l' => 'First BL',
       ]);
       DB::table('b_ls')->insert([
-        'ref' => 'Second BL',
+        'ref_b_l' => 'Second BL',
       ]);
     }
 }
@@ -178,39 +218,39 @@ class PieceTableSeeder extends Seeder {
 
     public function run()
     {
-      DB::table('pieces')->truncate();
-      DB::table('pieces')->insert([
-        'id_lot' => '1',
-        'ref_piece' => '1023',
-        'quantity' => '10',
-        'unit_weight' => '2',
-        'description' => 'Description of piece 1023',
-        'created_by' => '1'
-      ]);
-      DB::table('pieces')->insert([
-        'id_lot' => '1',
-        'ref_piece' => '1024',
-        'quantity' => '2',
-        'unit_weight' => '50',
-        'description' => 'Description of piece 1024',
-        'created_by' => '1'
-      ]);
-      DB::table('pieces')->insert([
-        'id_lot' => '1',
-        'ref_piece' => '1025',
-        'quantity' => '5',
-        'unit_weight' => '125',
-        'description' => 'Description of piece 1025',
-        'created_by' => '1'
-      ]);
-      DB::table('pieces')->insert([
-        'id_lot' => '2',
-        'ref_piece' => '2012',
-        'quantity' => '23',
-        'unit_weight' => '7',
-        'description' => 'Description of piece 2012',
-        'created_by' => '1'
-      ]);
+      // DB::table('pieces')->truncate();
+      // DB::table('pieces')->insert([
+      //   'id_lot' => '1',
+      //   'ref_piece' => '1023',
+      //   'quantity' => '10',
+      //   'unit_weight' => '2',
+      //   'description' => 'Description of piece 1023',
+      //   'created_by' => '1'
+      // ]);
+      // DB::table('pieces')->insert([
+      //   'id_lot' => '1',
+      //   'ref_piece' => '1024',
+      //   'quantity' => '2',
+      //   'unit_weight' => '50',
+      //   'description' => 'Description of piece 1024',
+      //   'created_by' => '1'
+      // ]);
+      // DB::table('pieces')->insert([
+      //   'id_lot' => '1',
+      //   'ref_piece' => '1025',
+      //   'quantity' => '5',
+      //   'unit_weight' => '125',
+      //   'description' => 'Description of piece 1025',
+      //   'created_by' => '1'
+      // ]);
+      // DB::table('pieces')->insert([
+      //   'id_lot' => '2',
+      //   'ref_piece' => '2012',
+      //   'quantity' => '23',
+      //   'unit_weight' => '7',
+      //   'description' => 'Description of piece 2012',
+      //   'created_by' => '1'
+      // ]);
     }
 }
 
@@ -218,32 +258,33 @@ class PieceTableSeeder extends Seeder {
 class ColisPieceTableSeeder extends Seeder {
 
     public function run()
-    {
-      DB::table('colis_piece')->truncate();
-
-      DB::table('colis_piece')->insert([
-        'id_colis' => '1',
-        'id_piece'=> '1',
-        'quantity' => '3'
-      ]);
-
-      DB::table('colis_piece')->insert([
-        'id_colis' => '1',
-        'id_piece'=> '2',
-        'quantity' => '1'
-      ]);
-
-      DB::table('colis_piece')->insert([
-        'id_colis' => '1',
-        'id_piece'=> '3',
-        'quantity' => '1'
-      ]);
-
-      DB::table('colis_piece')->insert([
-        'id_colis' => '2',
-        'id_piece'=> '1',
-        'quantity' => '5'
-      ]);
+     {
+    //   DB::table('colis_piece')->truncate();
+    //
+    //   DB::table('colis_piece')->insert([
+    //     'id_colis' => '1',
+    //     'id_piece'=> '1',
+    //     'quantity' => '3'
+    //   ]);
+    //
+    //   DB::table('colis_piece')->insert([
+    //     'id_colis' => '1',
+    //     'id_piece'=> '2',
+    //     'quantity' => '1'
+    //   ]);
+    //
+    //   DB::table('colis_piece')->insert([
+    //     'id_colis' => '1',
+    //     'id_piece'=> '3',
+    //     'quantity' => '1'
+    //   ]);
+    //
+    //   DB::table('colis_piece')->insert([
+    //     'id_colis' => '2',
+    //     'id_piece'=> '1',
+    //     'quantity' => '5'
+      // ]
+    // );
 
 
     }

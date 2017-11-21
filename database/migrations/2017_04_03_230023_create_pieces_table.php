@@ -16,10 +16,14 @@ class CreatePiecesTable extends Migration
       Schema::create('pieces', function (Blueprint $table) {
           $table->increments('id');
           $table->unsignedInteger('id_lot') -> nullable()-> default(null);
+
           $table->string('ref_piece');
-          $table->unsignedInteger('quantity') -> default(0);
-          $table->float('unit_weight') -> default(0);
-          $table->string('description') -> nullable()-> default(null);
+          $table->text('profil')->nullable();
+          $table->integer('quantity')->nullable();
+          $table->integer('length')->nullable();
+          $table->double('surface',14,4)->nullable();
+          $table->double('unit_weight',14,4)->nullable();
+          $table->text('designation')->nullable();
 
           /* Stamps fields */
           $table->timestamps();

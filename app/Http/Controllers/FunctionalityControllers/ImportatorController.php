@@ -6,13 +6,18 @@ namespace App\Http\Controllers\FunctionalityControllers;
 use App\Http\Controllers\Controller;
 use App\Models\ItemImport;
 use Illuminate\Http\Request;
+use App\Models\Lot;
+use App\Models\piece;
 use Excel;
 
 class ImportatorController extends Controller
 {
   public function index()
   {
-      return view('functionalities/importator');
+      $lots = Lot::whereHas('affaire', function ($query) {
+        $query->where('archived', '=', 0);
+      })->orderBy('id_affaire')->orderBy('ref_lot')->get();
+      return view('functionalities/importator',compact('lots'));
   }
 
   public function downloadExcel(Request $request, $type)
@@ -33,37 +38,31 @@ class ImportatorController extends Controller
      */
 	public function importExcel(Request $request)
 	{
-
 		if($request->hasFile('import_file')){
-			$path = $request->file('import_file')->getRealPath();
 
+			$path = $request->file('import_file')->getRealPath();
+      $idLot = $request->input('id_lot');
 			$data = Excel::load($path, function($reader) {})->get();
 
 			if(!empty($data) && $data->count()){
 
 				foreach ($data->toArray() as $key => $value) {
-					if(!empty($value)){
-                        $insert[]=$value;
-// 						foreach ($value as $key_2 => $v) {
-// //dd($key_2);
-// 							// $insert[] = ['rep_re' => $v['rep_re']
-//               // , 'profil' => $value['profil']
-//               // , 'quantite' => $value['quantite']
-//               // , 'longueur' => $value['longueur']
-//               // , 'surface' => $value['surface']
-//               // , 'poids_unit' => $value['poids_unit']
-//               // , 'poids_tot' => $value['poids_tot']
-//               // , 'designation' => $value['designation']];
-//               //
-//               // dd($insert);
-// 						}
 
-					}
+              $weightCalculated = $value['poids_tot']/$value['quantity'];
+
+              $piece = Piece::updateOrCreate(['id_lot' => $idLot
+              ,'ref_piece' => $value['rep_re']]
+              , ['profil' => $value['profil']
+              , 'quantity' => $value['quantity']
+              , 'length' => $value['longueur']
+              , 'surface' => $value['surface']
+              , 'unit_weight' => $weightCalculated
+              , 'designation' => $value['designation']]);
+
 				}
 
 
 				if(!empty($insert)){
-					ItemImport::insert($insert);
 					return back()->with('success','Insert Record successfully.');
 				}
 
@@ -73,4 +72,17 @@ class ImportatorController extends Controller
 
 		return back()->with('error','Please Check your file, Something is wrong there.');
 	}
+
+
+  public function exportPDF()
+  {
+    $data = Piece::get()->toArray();
+    return Excel::create('itsolutionstuff_example',function($excel) use ($data)
+    {
+      $excel->sheet('mySheet', function($sheet) use ($data)
+      {
+        $sheet->fromArray($data);
+      });
+    })->download("pdf");
+  }
 }

@@ -1,9 +1,14 @@
 {% extends 'layout.app' %}
 
 {% block content %}
-<div class="row">
-  <div class="col-md-5 col-md-offset-1">
-    {{ chartjs.render() | raw }}
-  </div>
-</div>
+  {% for chartjs in chartjs_s %}
+      <div class="row">
+
+        <div class="col-md-5 col-md-offset-1">
+          {{ chartjs.render() | raw }}
+        </div>
+        
+    </div>
+
+  {% endfor %}
 {% endblock %}

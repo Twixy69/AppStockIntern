@@ -6,23 +6,32 @@ namespace App\Http\Controllers\FunctionalityControllers;
 use App\Http\Controllers\Controller;
 
 use App\Models\Lot;
+use App\Models\Affaire;
 use Illuminate\Http\Request;
 
 class ChartJSController extends Controller
 {
     public function chartjs()
     {
+      $affaires=Affaire::where('archived',0)->get();
+      $compteur=0;
+      foreach ($affaires as $affaire) {
 
-      $lots = Lot::get();
+      //
+      // $lots = Lot::whereHas('affaire', function ($query) {
+      //   $query->where('archived', '=', 0);
+      // })->orderBy('id_affaire')->orderBy('ref_lot')->get();
 
-      foreach($lots as $lot) {
+      // dd($lots->id_affaire);
+
+      foreach($affaire->lot as $lot) {
 
         $barOptions_stacked ='barOptions_stacked';
         $color = 120*$lot->id;
 
-        $datasets[] =
+        $datasets[$compteur][] =
           [
-            'label' => $lot->id,
+            'label' => $lot->affaire->ref_affaire.'-'.$lot->ref_lot,
             // "backgroundColor" => "rgba(38,185,154,$color)",
             // "borderColor" => "rgba(38,185,154,0.7)",
             // "pointBorderColor" => "rgba(38,185,154,0.7)",
@@ -44,17 +53,21 @@ class ChartJSController extends Controller
                       $lot->theorical_weight
                     ]
           ];
-      }
 
+        }
 
-    $chartjs = app()->chartjs
-              ->name('barChartTest')
+          $chartjs_s[] = app()->chartjs
+              ->name('test'.$compteur)
               ->type('horizontalBar')
               ->size(['width'=>400,'height'=>200])
-              ->labels(['Fabriqué','Peint','Envoyé','Envoyé','EnvoyéVendu','Monté'])
-              ->datasets($datasets)
+              ->labels(['Fabriqué','Peint','Envoyé Vendu','Envoyé','Monté','Poids Théorique Total'])
+              ->datasets($datasets[$compteur])
               ->options([]);
 
-    return view('functionalities/chartjs',compact('chartjs'));
+              $compteur +=1 ;
+
+          }
+
+    return view('functionalities/chartjs',compact('chartjs_s'));
   }
 }

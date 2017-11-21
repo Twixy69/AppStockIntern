@@ -1,0 +1,33 @@
+{% extends 'layout.app' %}
+
+{% block content %}
+
+  {% if pieces.count > 0 %}
+    <h3>Piece</h3>
+
+    {% for piece in pieces %}
+        <h1><a href="{{ route('piece.show',piece) }}">
+        	{{ piece.ref_piece }}
+        </a></h1>
+
+        <p>{{ piece.description }}</p>
+
+    {% endfor %}
+
+  {% endif %}
+
+  {% if colis_s.count > 0 %}
+    <h3>Colis</h3>
+
+    {% for colis in colis_s %}
+        <h1><a href="{{ route('colis.show',colis) }}">
+          {{ colis.number }}
+        </a></h1>
+
+        <p>{{ colis.color }}</p>
+
+    {% endfor %}
+
+  {% endif %}
+
+{% endblock %}

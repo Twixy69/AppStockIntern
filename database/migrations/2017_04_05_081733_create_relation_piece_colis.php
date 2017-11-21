@@ -19,10 +19,15 @@ class CreateRelationPieceColis extends Migration
             $table->unsignedInteger('id_colis');
             $table->unsignedInteger('id_piece');
             $table->unsignedInteger('quantity');
+            $table->enum('state',['noInfo','manufactured','painted','sent','mounted']) -> default('noInfo');
 
             /* Unicity and constraints*/
+
+            $table->unique(['id_colis', 'id_piece','state']);
             $table->foreign('id_colis') -> references('id')->on('colis');
             $table->foreign('id_piece') -> references('id')->on('pieces');
+
+
         });
     }
 

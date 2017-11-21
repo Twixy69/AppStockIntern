@@ -18,12 +18,12 @@ class CreateLotsTable extends Migration
             $table->unsignedInteger('id_affaire');
             $table->string('ref_lot');
 
-            $table->float('theorical_weight', 11, 2)-> nullable() -> default(null);
             $table->float('manufactured_weight', 11, 2)-> nullable() -> default(null);
-            $table->float('mounted_weight', 11, 2)-> nullable() -> default(null);
             $table->float('painted_weight', 11, 2)-> nullable() -> default(null);
             $table->float('sent_weight', 11, 2)-> nullable() -> default(null); // update from pieces' weight & state
-
+            $table->float('mounted_weight', 11, 2)-> nullable() -> default(null);
+            
+            $table->float('theorical_weight', 11, 2)-> nullable() -> default(null);
             $table->float('sent_selled_weight', 11, 2)-> nullable() -> default(null); // update from pieces' weight & state + BL choice (boolean)
 
             $table->unsignedInteger('created_by') -> nullable() -> default(null);

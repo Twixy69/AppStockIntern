@@ -1,5 +1,5 @@
 <?php
-use App\Http\Controllers\ModelControllers\ColisController;
+//use App\Http\Controllers\ModelControllers\ColisController;
 use Illuminate\Contracts\View\View;
 
 /*
@@ -20,9 +20,11 @@ Route::resource('affaire','ModelControllers\AffaireController');
 Route::resource('lot','ModelControllers\LotController');
 //Route::resource('affaire.piece','PieceController',['parameters'=>'singular','names' => 'piece']);
 Route::resource('piece','ModelControllers\PieceController');
+Route::get('colis/{colis}/state', 'ModelControllers\ColisController@state')->name('colis.state');
 Route::resource('colis','ModelControllers\ColisController',['parameters' => ['colis' => 'colis']]);
 Route::resource('b_l','ModelControllers\BLController');
 Route::resource('adresse','ModelControllers\AdresseController');
+Route::resource('user','ModelControllers\UserController');
 
 // IMPORTATOR
 
@@ -30,7 +32,10 @@ Route::resource('adresse','ModelControllers\AdresseController');
 Route::get('importator','FunctionalityControllers\ImportatorController@index')->name('importator');
 Route::get('downloadExcel/{type}','FunctionalityControllers\ImportatorController@downloadExcel');
 Route::post('importExcel','FunctionalityControllers\ImportatorController@importExcel')->name('importExcel');
+Route::get('exportPDF','FunctionalityControllers\ImportatorController@exportPDF')->name('exportPDF');
 
+//SearchBar
+Route::get('searchBar','FunctionalityControllers\SearchBarController@results')->name('searchbar');
 
 // HOME //
 

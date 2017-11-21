@@ -1,0 +1,22 @@
+{% extends 'layout.app' %}
+
+
+{% block content %}
+
+{{ debug() }}
+Vue SHOW d'une user.
+
+    <h1>{{ users.name }}</h1>
+    <p>ID: {{ users.id }}</p>
+    <p>Groupe : {{ users.group }}</p>
+    <p>Email : {{ users.email }}</p>
+
+    <p> <a class="btn btn-primary" href="{{route('user.edit',users)}}"> EDIT</a> </p>
+
+	{{ form_open({'method': 'DELETE', url:route('user.destroy',users) }) }}
+    {{ form_submit('Delete', {'class':'btn btn-danger'}) }}
+	{{ form_close() }}
+
+    <p> <a class="btn btn-primary" href="{{route('user.index')}}">Retour</a> </p>
+
+{% endblock %}

@@ -21,8 +21,16 @@
 	{{ form_label('ref_piece','Reférence Pièce') }}
 	{{ form_text('ref_piece', (pieces.ref_piece) ) }}
 
-	{{ form_label('id_lot','Lot') }}
-	{{ form_select('id_lot', (idLot),(pieces.id_lot)) }}
+	<label for="id_lot">Lot</label>
+	<select id="id_lot" name="id_lot">
+	{% for lot in lots %}
+		{% if pieces.id_lot == lot.id %}
+			<option value="{{ lot.id }}" selected> {{lot.affaire.ref_affaire}} - {{ lot.ref_lot }}
+		{% else %}
+			<option value="{{ lot.id }}"> {{lot.affaire.ref_affaire}} - {{ lot.ref_lot }}
+		{% endif %}
+	{% endfor %}
+	</select>
 
 	{{ form_label('quantity','Quantité') }}
 	{{ form_text('quantity', (pieces.quantity) ) }}
@@ -30,8 +38,8 @@
 	{{ form_label('unit_weight','Poids Unitaire') }}
 	{{ form_text('unit_weight', (pieces.unit_weight) ) }}
 
-	{{ form_label('description','Description') }}
-	{{ form_text('description', (pieces.description) ) }}
+	{{ form_label('designation','Designation') }}
+	{{ form_text('designation', (pieces.designation) ) }}
 
 	{{ form_submit('save', {'class':'btn btn-primary'}) }}
 
